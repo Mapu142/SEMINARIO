@@ -1,0 +1,197 @@
+---
+title: |
+  \textcolor{blue}{Propuesta de investigación }
+  
+author: |
+  **Maria Paula Camargo**^[mcamargori.edu.co], Universidad Nacional de Colombia  
+  **Karen Barrantes **^[kbarrantes@unal.edu.co], Universidad Nacional de Colombia
+  
+institute: |
+  Departamento de Estadística  
+  Facultad de Ciencias  
+  Universidad Nacional de Colombia  
+  Bogotá, Colombia
+
+abstract: |
+  En esta propuesta queremos estudiar si existe una asociación entre el 
+  consumo diario de cafeína y la prevalencia autorreportada de enfermedad 
+  cardiovascular (ECV) en adultos de Estados Unidos, usando los datos 
+  públicos de la encuesta NHANES 2017-2018. La idea es caracterizar a la 
+  población encuestada, describir cómo se comporta la prevalencia de ECV 
+  según el nivel de consumo de cafeína, y evaluar esa relación con modelos 
+  estadísticos que permitan controlar el efecto de la edad, el sexo y otras 
+  variables sociodemográficas, para saber si lo que se observa a simple 
+  vista se sostiene o si en realidad se explica por esos factores.
+
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+    latex_engine: xelatex
+lang: es
+
+fontsize: 12pt
+geometry: margin=2.5cm
+
+bibliography: bibliografia_seminario.bib
+
+nocite: |
+  @*
+
+link-citations: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Problema de investigación
+
+## Tema o título
+
+**Consumo de cafeína y enfermedad cardiovascular en adultos de Estados
+Unidos en un análisis de la encuesta NHANES 2017-2018.**
+
+## Planteamiento del problema
+
+El café es una de las bebidas más consumidas en el mundo, y desde hace
+años se discute qué tanto afecta a la salud del corazón. Parte de esa
+preocupación viene de que la cafeína puede subir momentáneamente la
+presión arterial y acelerar el ritmo cardíaco, lo que llevó durante
+mucho tiempo a verla como un posible factor de riesgo cardiovascular.
+Sin embargo, cuando se han hecho seguimientos a grandes grupos de
+personas durante varios años, el panorama cambia bastante; un
+metaanálisis que combinó 36 estudios de cohorte con más de 1,2 millones
+de participantes encontró que el riesgo no aumenta de forma lineal con
+el consumo, sino que el menor riesgo aparece en quienes toman entre 3 y
+5 tazas al día, sin que los consumos altos muestren un riesgo mayor.
+Otras revisiones han llegado a resultados parecidos, y algunos análisis
+de cohortes conocidas como Framingham, ARIC y CHS incluso relacionan un
+mayor consumo de café con menor riesgo de falla cardíaca.
+
+A pesar de esa evidencia de estudios longitudinales, nos parece
+pertinente mirar esta pregunta con una fuente de datos distinta; la
+Encuesta Nacional de Salud y Nutrición de Estados Unidos (NHANES), que
+es pública, representativa a nivel nacional y combina información
+detallada sobre la dieta con el autorreporte de diagnósticos médicos.
+Un punto que nos llama la atención del problema es que tanto el
+consumo de cafeína como la presencia de ECV están asociados a la edad
+y al sexo, así que cualquier relación que se vea "a simple vista"
+entre cafeína y ECV podría deberse en realidad a estos dos factores, y
+no a un efecto propio de la cafeína.
+
+Por eso se creé que vale la pena revisar, con los datos de NHANES, si
+existe una asociación entre la ingesta diaria de cafeína y la
+prevalencia de enfermedad cardiovascular en adultos de Estados Unidos,
+teniendo en cuenta al mismo tiempo la edad, el sexo y otras
+características sociodemográficas que también podrían estar detrás de
+esa prevalencia (véase el diccionario de variables en el Anexo 1). Con
+esto buscamos ver si las diferencias que se observan inicialmente se
+mantienen una vez se controlan estas características, o si más bien
+desaparecen.
+
+## Pregunta de investigación
+
+**¿Existe asociación entre la ingesta diaria de cafeína y la prevalencia
+autorreportada de enfermedad cardiovascular en adultos de Estados Unidos
+(NHANES 2017-2018), una vez se tienen en cuenta la edad, el sexo y otras
+características sociodemográficas?**
+
+# Justificación
+
+Estudiar la relación entre la cafeína y la enfermedad cardiovascular parece relevante tanto para la salud pública como para la
+formación estadística. La cafeína es una sustancia que consume
+prácticamente toda la población adulta y que además es fácil de
+modificar en la dieta diaria; por eso, tener evidencia clara sobre si
+se asocia (o no) con la ECV puede aportar a las recomendaciones sobre
+qué tanto consumo se considera seguro.
+
+Desde lo **estadístico**, trabajar con una base secundaria como NHANES permite poner en práctica muchos aspectos como, describir
+una muestra, comparar grupos, evaluar si una relación observada se debe
+en realidad a otras variables, y ajustar modelos que tengan en cuenta
+varios factores al mismo tiempo. También da espacio para ir un poco
+más allá de lo básico si el tiempo y los datos lo permiten, por ejemplo
+mirando si la relación entre cafeína y ECV es realmente lineal o si se
+comporta distinto en niveles muy altos de consumo.
+
+Desde lo **práctico**, los resultados pueden ayudar a aclarar si el
+consumo habitual de cafeína (hasta unos niveles razonables) debería
+considerarse un factor de riesgo cardiovascular, o si lo que parece una
+asociación en un análisis simple en realidad se explica por la edad y
+el sexo de quienes consumen más cafeína.
+
+Por último, este trabajo también tiene sentido como ejercicio de
+formación ya que obliga a convertir una pregunta de salud pública en
+variables medibles a partir de datos reales,
+plantear hipótesis que se puedan poner a prueba y elegir herramientas
+estadísticas que tengan sentido con el tipo de datos (transversales) y
+con las limitaciones propias de un estudio observacional. En cuanto a
+viabilidad, los datos de NHANES son de acceso público y ya e cuenta con
+un primer acercamiento exploratorio a la base, lo que hace que el
+proyecto sea realizable.
+
+# Objetivos
+
+## Objetivo general
+
+**Evaluar la asociación entre la ingesta diaria de cafeína y la
+prevalencia autorreportada de enfermedad cardiovascular en adultos de
+Estados Unidos, a partir de los datos de la encuesta NHANES 2017-2018,
+considerando el efecto de la edad, el sexo y otras características
+sociodemográficas.**
+
+## Objetivos específicos
+
+1.  **Caracterizar** a los adultos de la muestra según variables
+    sociodemográficas (edad, sexo, raza, nivel educativo, razón
+    ingreso/pobreza), consumo de cafeína y prevalencia de enfermedad
+    cardiovascular.
+
+2.  **Describir y comparar** la prevalencia de enfermedad cardiovascular
+    según categorías de consumo de cafeína (0, 1-100, 101-200, 201-400 y
+    más de 400 mg/día).
+
+3.  **Evaluar si la edad y el sexo explican** la relación observada
+    entre cafeína y ECV, mediante un análisis por grupos etarios que
+    permita ver si la tendencia se mantiene dentro de cada grupo.
+
+4.  **Estimar** la asociación entre el consumo de cafeína y la enfermedad cardiovascular mediante
+    modelos de regresión logística, ajustando por edad, sexo, raza,
+    nivel educativo, razón ingreso/pobreza y energía total consumida.
+
+5.  **Explorar si la relación entre cafeína y ECV es lineal** o si se
+    comporta distinto en niveles altos de consumo, como un análisis
+    complementario a los modelos de regresión de los objetivos
+    anteriores.
+
+6.  **Revisar qué tan estables son los resultados**, comprobando si se
+    mantienen al excluir del análisis los consumos de cafeína
+    inusualmente altos y al mirar por separado cada tipo de evento
+    cardiovascular (enfermedad coronaria, infarto y accidente
+    cerebrovascular).
+
+# Anexos
+
+**Anexo 1. Diccionario de variables de la base analítica.**
+
+| Variable | Origen (NHANES) | Descripción | Codificación |
+|---|---|---|---|
+| `edad` | RIDAGEYR | Edad al momento del examen | Años (80 = 80 o más) |
+| `sexo` | RIAGENDR | Sexo | Hombre / Mujer |
+| `raza` | RIDRETH3 | Raza y origen hispano | 6 grupos |
+| `educacion` | DMDEDUC2 | Nivel educativo | 5 niveles |
+| `pir` | INDFMPIR | Razón ingreso familiar / línea de pobreza | 0-5 |
+| `cafeina_mg` | DR1TCAFF | Cafeína total ingerida en el día (recordatorio 24h) | mg/día |
+| `kcal` | DR1TKCAL | Energía total ingerida en el día | kcal/día |
+| `peso_dieta` | WTDRD1 | Peso muestral del recordatorio dietario | Numérico |
+| `coronaria` | MCQ160C | Diagnóstico autorreportado de enfermedad coronaria | 1 = sí, 0 = no |
+| `infarto` | MCQ160E | Diagnóstico autorreportado de infarto | 1 = sí, 0 = no |
+| `acv` | MCQ160F | Diagnóstico autorreportado de ACV | 1 = sí, 0 = no |
+| `ecv` | derivada | Al menos uno de los tres diagnósticos anteriores | 1 = sí, 0 = no |
+| `cat_cafeina` | derivada | Categoría de consumo de cafeína | 5 niveles |
+| `grupo_edad` | derivada | Grupo etario | 20-39, 40-59, 60+ |
+
+# Referencias
+
+::: {#refs}
+:::
