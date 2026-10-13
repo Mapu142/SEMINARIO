@@ -25,16 +25,21 @@ abstract: |
 
 output:
   pdf_document:
+    keep_tex: true
     toc: true
     toc_depth: 3
     number_sections: true
     latex_engine: xelatex
+header-includes:
+  - \usepackage{float}
+  - \usepackage{array}
+
 lang: es
 
 fontsize: 12pt
 geometry: margin=2.5cm
 
-#bibliography: bibliografia_seminario.bib
+bibliography: bibliografia_seminario.bib
 
 nocite: |
   @*
@@ -263,7 +268,7 @@ necesaria para el estudio.
 ## Variables e indicadores
 
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \small
 \caption{Definición y caracterización de las variables del estudio}
@@ -411,11 +416,11 @@ Posteriormente, se evaluó la presencia de valores faltantes en las variables de
 
 En total, 1.081 de los 5.265 participantes que cumplían el criterio de edad presentaron información faltante en al menos una de estas variables, lo que representa el 20,5 % de la población elegible. Adicionalmente, durante la recodificación del nivel educativo (`DMDEDUC2`), los códigos correspondientes a respuestas no concluyentes se trataron como valores faltantes, de acuerdo con la codificación original de la encuesta. Asimismo, se identificó un registro con información insuficiente para determinar el desenlace de enfermedad cardiovascular autorreportada (`ecv`). Una vez aplicados los criterios de inclusión y disponibilidad de información, se estableció una muestra analítica preliminar de casos completos de 4.180 participantes adultos, cifra que deberá corresponder al resultado verificado de la depuración final.
 
-Para el análisis principal de la asociación entre la ingesta de cafeína y los antecedentes autorreportados de enfermedad cardiovascular, se utilizará una estrategia de análisis de casos completos (*complete-case analysis*). En consecuencia, la regresión logística multivariada incluirá únicamente a los participantes con información válida y observada en el desenlace y en todas las variables explicativas y de ajuste incorporadas en el modelo. Esta decisión permite definir una muestra analítica consistente para la estimación de los *odds ratios* ajustados. No obstante, de acuerdo con Little y Rubin (2019, cap. 3), la validez de este procedimiento depende de los supuestos relativos al mecanismo de ausencia y a la estructura del modelo; por tanto, no se asumirá que las estimaciones están libres de sesgo únicamente porque los faltantes se concentren en las covariables.
+Para el análisis principal de la asociación entre la ingesta de cafeína y los antecedentes autorreportados de enfermedad cardiovascular, se utilizará una estrategia de análisis de casos completos (*complete-case analysis*). En consecuencia, la regresión logística multivariada incluirá únicamente a los participantes con información válida y observada en el desenlace y en todas las variables explicativas y de ajuste incorporadas en el modelo. Esta decisión permite definir una muestra analítica consistente para la estimación de los *odds ratios* ajustados. No obstante, de acuerdo con @little2020statistical (2019, cap. 3), la validez de este procedimiento depende de los supuestos relativos al mecanismo de ausencia y a la estructura del modelo; por tanto, no se asumirá que las estimaciones están libres de sesgo únicamente porque los faltantes se concentren en las covariables.
 
 Como parte del diagnóstico de los datos faltantes, se compararon descriptivamente algunas características de los participantes con información completa e incompleta. La edad media fue de 51,2 años entre los casos completos y de 52,2 años entre los incompletos; la proporción de mujeres fue del 51,4 % y del 53,2 %, respectivamente. La prevalencia descriptiva de enfermedad cardiovascular autorreportada fue del 10,4 % en el grupo completo y del 9,0 % en el incompleto. Estas diferencias permiten caracterizar ambos grupos, pero no son suficientes para determinar el mecanismo de ausencia ni para descartar posibles sesgos derivados de la exclusión de registros.
 
-Como estrategia complementaria, se propone realizar un análisis de sensibilidad mediante imputación múltiple, siempre que la evaluación de los patrones de ausencia y la información disponible permitan justificar este procedimiento. Para ello, se generarán varias bases de datos imputadas mediante un modelo que considere el desenlace, las variables explicativas y de ajuste, y otras variables auxiliares pertinentes. La regresión logística se estimará en cada base imputada y los resultados se combinarán mediante las reglas de Rubin, teniendo en cuenta las particularidades del diseño muestral de NHANES. Posteriormente, se compararán los *odds ratios* ajustados y sus intervalos de confianza con los obtenidos en el análisis principal de casos completos, con el propósito de evaluar la robustez de las conclusiones frente al tratamiento de los datos faltantes.
+Como estrategia complementaria, se propone realizar un análisis de sensibilidad mediante imputación múltiple, siempre que la evaluación de los patrones de ausencia y la información disponible permitan justificar este procedimiento. Para ello, se generarán varias bases de datos imputadas mediante un modelo que considere el desenlace, las variables explicativas y de ajuste, y otras variables auxiliares pertinentes. La regresión logística se estimará en cada base imputada y los resultados se combinarán mediante las reglas de Rubin [@little2020statistical], teniendo en cuenta las particularidades del diseño muestral de NHANES. Posteriormente, se compararán los *odds ratios* ajustados y sus intervalos de confianza con los obtenidos en el análisis principal de casos completos, con el propósito de evaluar la robustez de las conclusiones frente al tratamiento de los datos faltantes.
 
 Finalmente, se reconoce que el análisis de casos completos puede reducir la precisión de las estimaciones y modificar la composición de la muestra analítica. Por ello, la comparación con los resultados de la imputación múltiple permitirá examinar si las conclusiones sustantivas dependen de la estrategia utilizada para tratar los faltantes. La interpretación definitiva de las estimaciones considerará, además, los pesos, estratos y unidades primarias de muestreo correspondientes al diseño complejo de NHANES.
 
@@ -448,23 +453,27 @@ corresponda, así como los principales supuestos que deberán verificarse.
 
 | Objetivo específico | Variables involucradas | Procedimiento estadístico propuesto |
 |:------------------|:---------------------|:-------------------------------|
-| 1 | [Variables] | [Procedimiento] |
-| 2 | [Variables] | [Procedimiento] |
-| 3 | [Variables] | [Procedimiento] |
-| 4 | [Variables] | [Procedimiento] |
-| 5 | [Variables] | [Procedimiento] |
+| 1 | Edad, sexo, raza/etnia, nivel educativo, razón ingreso/pobreza , consumo de cafeína y ECV. | Se realizará un análisis descriptivo de las características de la población analítica. Para las variables categóricas se estimarán frecuencias y porcentajes; para las cuantitativas se calcularán medidas de tendencia central y dispersión, como media, desviación estándar, mediana y rango intercuartílico, según la distribución observada. Se estimarán la prevalencia de ECV y la distribución del consumo de cafeína. Se incorporarán los pesos y el diseño muestral de NHANES para obtener estimaciones representativas de la población objetivo. |
+| 2 | ECV (variable dicotómica) y consumo de cafeína | Se estimará la prevalencia de ECV en cada categoría de consumo, acompañada de intervalos de confianza del 95 %. Para evaluar si existen diferencias entre categorías se empleará una prueba de asociación apropiada para encuestas complejas, como la prueba de Rao–Scott, que ajusta la prueba de independencia por el diseño muestral. Esto permitirá identificar diferencias globales en la prevalencia, sin asumir que estas se deben exclusivamente al consumo de cafeína. |
+| 3 | Consumo de cafeína, ECV, edad y sexo. | Se comparará la asociación observada inicialmente entre cafeína y ECV con la obtenida al considerar la edad y el sexo. Además, se estimarán las prevalencias de ECV por categoría de cafeína dentro de los grupos etarios definidos (20–39, 40–59 y 60 años o más), para examinar si la tendencia observada se mantiene entre edades. Se considerará la inclusión de términos de interacción entre cafeína y edad, y entre cafeína y sexo, en modelos de regresión logística, para evaluar si la asociación varía según estas características. Así se podrá distinguir entre una relación que cambia al controlar estas variables y otra cuya magnitud difiere entre grupos. |
+| 4 | ECV, consumo de cafeína, edad, sexo, raza/etnia, nivel educativo, razón ingreso/pobreza y energía total consumida. | Se ajustará un modelo de regresión logística para encuestas complejas, con ECV como variable dependiente y consumo de cafeína como variable explicativa principal. Se incluirán las covariables especificadas para controlar posibles factores de confusión. Se reportarán razones de momios (odds ratios, OR) ajustadas e intervalos de confianza del 95 %. El modelo permitirá evaluar la asociación entre el consumo de cafeína y la probabilidad de reportar antecedentes de ECV, condicionada a las covariables incluidas. La interpretación se hará como asociación, no como efecto causal. |
+| 5 | Consumo de cafeína en mg/día y ECV, con las mismas covariables de ajuste del objetivo 4. | Se comparará el modelo que incorpora cafeína como variable continua lineal con un modelo que permita una relación no lineal, por ejemplo, mediante splines cúbicos restringidos. Esto permitirá examinar si el cambio en la asociación es aproximadamente constante a lo largo del consumo o si existen curvaturas o variaciones en niveles altos. La forma de la relación se evaluará mediante pruebas de no linealidad y la representación gráfica de las asociaciones estimadas con sus intervalos de confianza. Este análisis complementará el modelo principal sin depender exclusivamente de categorías arbitrarias de consumo. |
+| 6 | Consumo de cafeína, ECV global y cada evento por separado: enfermedad coronaria (MCQ160C), infarto (MCQ160E) y accidente cerebrovascular (MCQ160F). |Se realizarán análisis de sensibilidad. Primero, se repetirá el modelo principal excluyendo consumos inusualmente altos, definidos mediante un criterio explícito y documentado, para determinar si las estimaciones dependen de observaciones extremas. Segundo, se ajustarán modelos separados para cada evento cardiovascular, conservando las covariables y el diseño muestral. Se compararán las OR ajustadas, sus intervalos de confianza y la dirección y magnitud de las asociaciones con los resultados principales. Estos análisis permitirán valorar la robustez de los hallazgos y si la asociación difiere según el evento estudiado. |
+
 
 ## Consideraciones éticas y manejo de la información
 
-```{=html}
-<!--
-Indique los aspectos éticos relevantes para el estudio: consentimiento, privacidad,
-confidencialidad, anonimización y manejo seguro de la información, según aplique.
--->
-```
+El estudio utiliza información secundaria proveniente de la *National Health and Nutrition Examination Survey* (NHANES) correspondiente al periodo 2017-2018, realizada por el National Center for Health Statistics (NCHS) de los Centers for Disease Control and Prevention (CDC) de Estados Unidos. Por tanto, no implica el reclutamiento de participantes ni la recolección directa de datos por parte del equipo investigador.
 
-[Describa aquí las consideraciones éticas y de manejo de la
-información.]
+**Consentimiento informado.** El consentimiento informado corresponde al proceso de recolección original de NHANES, en el cual se obtiene la autorización de los participantes para su participación en la encuesta y los procedimientos asociados. En este estudio no se solicitará un nuevo consentimiento, dado que se analizarán datos previamente recolectados y disponibles públicamente.
+
+**Privacidad, confidencialidad y anonimización.** Se utilizará la base de datos pública de NHANES, en la que se han aplicado medidas de protección de la confidencialidad y no se incluyen identificadores personales directos que permitan reconocer a los participantes. El análisis se realizará sobre registros individuales desidentificados y los resultados se presentarán de forma agregada, evitando cualquier intento de identificación o divulgación de información que pueda comprometer la privacidad de las personas.
+
+**Manejo seguro de la información.** Los archivos descargados se almacenarán en un entorno de trabajo con acceso controlado y se utilizarán exclusivamente para los fines académicos de la investigación. Durante la integración, depuración y análisis de las bases de datos se conservarán únicamente las variables necesarias para cumplir los objetivos del estudio, sin intentar vincular los registros con fuentes externas para identificar participantes.
+
+**Uso responsable y limitaciones.** La información se analizará de acuerdo con los lineamientos de uso de datos públicos de NHANES y se reconocerá la fuente original. Las conclusiones se formularán considerando las limitaciones del diseño observacional y transversal de la encuesta, por lo que las asociaciones encontradas entre el consumo de cafeína y la enfermedad cardiovascular no se interpretarán como evidencia de causalidad.
+
+Dado que se trata de un análisis secundario de datos públicos desidentificados, no se prevé contacto con participantes ni recolección de información identificable. Los requisitos institucionales aplicables a la revisión ética de este tipo de investigación deberán verificarse según las normas de la institución académica correspondiente.
 
 # Cronograma
 
