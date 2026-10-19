@@ -1,0 +1,8 @@
+#install.packages("haven")
+library(haven)
+setwd("C:/PERSONAL_MAPU/UNIVERSIDADES/NACIONAL/SEMINARIO")
+datos <- read_xpt("DR1TOT_L.xpt")
+head(datos)
+datos2 <- read_xpt("DR2TOT_L.xpt")
+bpql <- read_xpt("BPQ_L.xpt")
+dem <- read_xpt("DEMO_L.xpt")
