@@ -120,9 +120,9 @@
   pdfcreator={LaTeX via pandoc}}
 
 \title{\textcolor{blue}{Propuesta de investigación }}
-\author{\textbf{Maria Paula Camargo}\footnote{mcamargori.edu.co},
+\author{\textbf{Maria Paula Camargo}\footnote{\href{mailto:mcamargo@unal.edu.co}{\nolinkurl{mcamargo@unal.edu.co}}},
 Universidad Nacional de Colombia\\
-\textbf{Karen Barrantes }\footnote{\href{mailto:kbarrantes@unal.edu.co}{\nolinkurl{kbarrantes@unal.edu.co}}},
+\textbf{Karen Barrantes}\footnote{\href{mailto:kbarrantes@unal.edu.co}{\nolinkurl{kbarrantes@unal.edu.co}}},
 Universidad Nacional de Colombia}
 \date{}
 
@@ -154,41 +154,40 @@ Estados Unidos en un análisis de la encuesta NHANES 2017-2018.}
 \subsection{Planteamiento del
 problema}\label{planteamiento-del-problema}
 
-El café es una de las bebidas más consumidas en el mundo, y desde hace
-años se discute qué tanto afecta a la salud del corazón. Parte de esa
-preocupación viene de que la cafeína puede subir momentáneamente la
-presión arterial y acelerar el ritmo cardíaco, lo que llevó durante
-mucho tiempo a verla como un posible factor de riesgo cardiovascular.
-Sin embargo, cuando se han hecho seguimientos a grandes grupos de
-personas durante varios años, el panorama cambia bastante; un
-metaanálisis que combinó 36 estudios de cohorte con más de 1,2 millones
-de participantes encontró que el riesgo no aumenta de forma lineal con
-el consumo, sino que el menor riesgo aparece en quienes toman entre 3 y
-5 tazas al día, sin que los consumos altos muestren un riesgo mayor.
-Otras revisiones han llegado a resultados parecidos, y algunos análisis
-de cohortes conocidas como Framingham, ARIC y CHS incluso relacionan un
-mayor consumo de café con menor riesgo de falla cardíaca.
+El café es una de las bebidas más consumidas en el mundo, y durante años
+se discutió qué tanto afecta la salud del corazón, en parte porque la
+cafeína puede subir momentáneamente la presión arterial y el ritmo
+cardíaco. Sin embargo, los estudios que han seguido a grandes grupos de
+personas en el tiempo muestran un panorama distinto: un metaanálisis
+dosis-respuesta con 36 cohortes y más de 1,2 millones de participantes
+encontró que el riesgo no sube de forma lineal con el consumo, sino que
+es menor entre quienes toman 3 a 5 tazas al día
+(\citeproc{ref-ding2014coffee}{Ding et~al. 2014}); una revisión
+sombrilla de más de 200 metaanálisis llegó a conclusiones parecidas
+(\citeproc{ref-poole2017coffee}{Poole et~al. 2017}), y un análisis
+conjunto de las cohortes Framingham, ARIC y CHS asoció un mayor consumo
+de café con menor riesgo de falla cardíaca
+(\citeproc{ref-stevens2021coffee}{Stevens et~al. 2021}). Estas tres
+fuentes son estudios de cohorte, es decir, siguen a las personas en el
+tiempo, lo que les permite hablar en términos de ``riesgo''; nuestro
+estudio usará una fuente distinta.
 
-A pesar de esa evidencia de estudios longitudinales, nos parece
-pertinente mirar esta pregunta con una fuente de datos distinta; la
-Encuesta Nacional de Salud y Nutrición de Estados Unidos (NHANES), que
-es pública, representativa a nivel nacional y combina información
-detallada sobre la dieta con el autorreporte de diagnósticos médicos. Un
-punto que nos llama la atención del problema es que tanto el consumo de
-cafeína como la presencia de ECV están asociados a la edad y al sexo,
-así que cualquier relación que se vea ``a simple vista'' entre cafeína y
-ECV podría deberse en realidad a estos dos factores, y no a un efecto
-propio de la cafeína.
-
-Por eso se creé que vale la pena revisar, con los datos de NHANES, si
-existe una asociación entre la ingesta diaria de cafeína y la
-prevalencia de enfermedad cardiovascular en adultos de Estados Unidos,
-teniendo en cuenta al mismo tiempo la edad, el sexo y otras
-características sociodemográficas que también podrían estar detrás de
-esa prevalencia (véase el diccionario de variables en el Anexo 1). Con
-esto buscamos ver si las diferencias que se observan inicialmente se
-mantienen una vez se controlan estas características, o si más bien
-desaparecen.
+Queremos mirar esta pregunta con la Encuesta Nacional de Salud y
+Nutrición de Estados Unidos (NHANES), pública, representativa a nivel
+nacional y que combina dieta con autorreporte de diagnósticos médicos
+(\citeproc{ref-cdc2018nhanes}{Centers for Disease Control and Prevention
+(CDC), National Center for Health Statistics 2018}). Como NHANES recoge
+la cafeína y los antecedentes de enfermedad en el mismo momento,
+cualquier hallazgo de este estudio será una asociación transversal, no
+una estimación de riesgo ni evidencia de que la cafeína cause o prevenga
+la enfermedad. Además, tanto el consumo de cafeína como la ECV están
+asociados con la edad y el sexo, así que una relación que se vea ``a
+simple vista'' podría deberse a estos dos factores y no a un efecto
+propio de la cafeína. Por eso creemos que vale la pena revisar, con los
+datos de NHANES, si existe esa asociación una vez se controla por edad,
+sexo y otras características sociodemográficas (véase el diccionario de
+variables en el Anexo 1), dentro de los límites que impone un diseño
+observacional y transversal.
 
 \subsection{Pregunta de
 investigación}\label{pregunta-de-investigaciuxf3n}
@@ -200,37 +199,35 @@ el sexo y otras características sociodemográficas?}
 
 \section{Justificación}\label{justificaciuxf3n}
 
-Estudiar la relación entre la cafeína y la enfermedad cardiovascular
-parece relevante tanto para la salud pública como para la formación
-estadística. La cafeína es una sustancia que consume prácticamente toda
-la población adulta y que además es fácil de modificar en la dieta
-diaria; por eso, tener evidencia clara sobre si se asocia (o no) con la
-ECV puede aportar a las recomendaciones sobre qué tanto consumo se
-considera seguro.
+Estudiar la cafeína y la enfermedad cardiovascular es relevante tanto
+para la salud pública como para la formación estadística. La cafeína la
+consume casi toda la población adulta y es fácil de modificar en la
+dieta; tener evidencia sobre si se asocia (o no) con la ECV aporta un
+insumo adicional a esa discusión, aunque un estudio transversal como
+este no puede, por sí solo, establecer límites de consumo seguro ---eso
+requiere además evidencia longitudinal y, de ser posible, experimental.
 
 Desde lo \textbf{estadístico}, trabajar con una base secundaria como
-NHANES permite poner en práctica muchos aspectos como, describir una
-muestra, comparar grupos, evaluar si una relación observada se debe en
-realidad a otras variables, y ajustar modelos que tengan en cuenta
-varios factores al mismo tiempo. También da espacio para ir un poco más
-allá de lo básico si el tiempo y los datos lo permiten, por ejemplo
-mirando si la relación entre cafeína y ECV es realmente lineal o si se
-comporta distinto en niveles muy altos de consumo.
+NHANES permite describir una muestra, comparar grupos, evaluar si una
+asociación observada se debe en realidad a otras variables, y ajustar
+modelos que consideren varios factores a la vez; si el tiempo y los
+datos lo permiten, también da espacio para mirar si la relación es
+realmente lineal. Desde lo \textbf{práctico}, los resultados ayudarían a
+aclarar si el consumo habitual de cafeína se asocia con una mayor
+prevalencia autorreportada de ECV, o si esa asociación en realidad se
+explica por la edad y el sexo de quienes consumen más cafeína; por el
+carácter transversal del estudio, esto no permitiría afirmar que la
+cafeína es (o no) un factor de riesgo cardiovascular en sentido causal,
+pero sí aportaría evidencia descriptiva para contrastar con los estudios
+de cohorte disponibles.
 
-Desde lo \textbf{práctico}, los resultados pueden ayudar a aclarar si el
-consumo habitual de cafeína (hasta unos niveles razonables) debería
-considerarse un factor de riesgo cardiovascular, o si lo que parece una
-asociación en un análisis simple en realidad se explica por la edad y el
-sexo de quienes consumen más cafeína.
-
-Por último, este trabajo también tiene sentido como ejercicio de
-formación ya que obliga a convertir una pregunta de salud pública en
-variables medibles a partir de datos reales, plantear hipótesis que se
-puedan poner a prueba y elegir herramientas estadísticas que tengan
-sentido con el tipo de datos (transversales) y con las limitaciones
-propias de un estudio observacional. En cuanto a viabilidad, los datos
-de NHANES son de acceso público y ya e cuenta con un primer acercamiento
-exploratorio a la base, lo que hace que el proyecto sea realizable.
+Por último, el proyecto es un buen ejercicio de formación porque obliga
+a convertir una pregunta de salud pública en variables medibles a partir
+de datos reales, plantear hipótesis que se puedan poner a prueba y
+elegir herramientas estadísticas coherentes con datos transversales y
+con las limitaciones de un estudio observacional. En cuanto a
+viabilidad, los datos de NHANES son de acceso público y ya contamos con
+un primer acercamiento exploratorio a la base.
 
 \section{Objetivos}\label{objetivos}
 
@@ -256,133 +253,183 @@ sociodemográficas.}
   cardiovascular según categorías de consumo de cafeína (0, 1-100,
   101-200, 201-400 y más de 400 mg/día).
 \item
-  \textbf{Evaluar si la edad y el sexo explican} la relación observada
-  entre cafeína y ECV, mediante un análisis por grupos etarios que
-  permita ver si la tendencia se mantiene dentro de cada grupo.
+  \textbf{Explorar descriptivamente} si la relación entre cafeína y ECV
+  se mantiene al estratificar por grupos etarios y por sexo, como insumo
+  previo para decidir si estas variables deben tratarse como posibles
+  factores de confusión en los modelos del objetivo 4.
 \item
-  \textbf{Estimar} la asociación entre el consumo de cafeína y la
-  enfermedad cardiovascular mediante modelos de regresión logística,
-  ajustando por edad, sexo, raza, nivel educativo, razón ingreso/pobreza
-  y energía total consumida.
+  \textbf{Estimar, controlando por posibles factores de confusión}, la
+  asociación entre el consumo de cafeína y la enfermedad cardiovascular
+  mediante modelos de regresión logística que ajusten por edad, sexo,
+  raza, nivel educativo, razón ingreso/pobreza y energía total
+  consumida.
 \item
-  \textbf{Explorar si la relación entre cafeína y ECV es lineal} o si se
-  comporta distinto en niveles altos de consumo, como un análisis
-  complementario a los modelos de regresión de los objetivos anteriores.
+  \textbf{Explorar si la relación entre cafeína y ECV es lineal} o
+  presenta curvatura en niveles altos de consumo, mediante un término
+  cuadrático que complemente los modelos de regresión de los objetivos
+  anteriores.
 \item
   \textbf{Revisar qué tan estables son los resultados}, comprobando si
-  se mantienen al excluir del análisis los consumos de cafeína
-  inusualmente altos y al mirar por separado cada tipo de evento
-  cardiovascular (enfermedad coronaria, infarto y accidente
-  cerebrovascular).
+  se mantienen al mirar por separado cada tipo de evento cardiovascular
+  (enfermedad coronaria, infarto y accidente cerebrovascular).
 \end{enumerate}
+
+\section{Antecedentes}\label{antecedentes}
+
+La evidencia más citada sobre cafeína y enfermedad cardiovascular viene
+de estudios de cohorte. Ding et~al.
+(\citeproc{ref-ding2014coffee}{2014}), en un metaanálisis
+dosis-respuesta con 36 cohortes y más de 1,2 millones de participantes,
+encontraron una relación en forma de ``U'': menor riesgo entre quienes
+tomaban 3 a 5 tazas de café al día que entre quienes no tomaban o
+tomaban cantidades muy altas. Poole et~al.
+(\citeproc{ref-poole2017coffee}{2017}), en una revisión sombrilla de más
+de 200 metaanálisis y 17 ensayos clínicos, reportaron que el consumo
+habitual de café se asocia más con beneficios que con daños para
+distintos desenlaces, incluidos los cardiovasculares, aunque advierten
+que buena parte de esa evidencia es observacional. Stevens et~al.
+(\citeproc{ref-stevens2021coffee}{2021}), con datos armonizados de las
+cohortes Framingham, ARIC y CHS, asociaron un mayor consumo de café con
+menor riesgo de desarrollar falla cardíaca.
+
+Los tres trabajos coinciden en no reportar un aumento del riesgo
+cardiovascular con el consumo habitual de cafeína, lo que contrasta con
+la idea más antigua de que la cafeína eleva ese riesgo. Pero también
+comparten limitaciones relevantes para nuestro estudio: son
+longitudinales, con cohortes concentradas en ciertas regiones o grupos
+de edad, con covariables de ajuste que no siempre coinciden entre sí ni
+son necesariamente generalizables a la población de Estados Unidos, y
+ninguno corresponde a un análisis transversal sobre una muestra
+representativa a nivel nacional como NHANES ---que además mide la
+exposición de otra forma (recordatorio dietético de 24 horas) y el
+desenlace como prevalencia autorreportada en un momento dado, no como
+incidencia a lo largo del tiempo. Tampoco discuten de forma explícita el
+papel de la edad y el sexo como posibles factores de confusión, pese a
+que ambas variables están fuertemente asociadas tanto con la cafeína
+como con la ECV. Ese es el vacío que busca atender esta propuesta: usar
+una fuente transversal, pública y representativa a nivel nacional para
+describir la asociación entre cafeína y ECV autorreportada, y evaluar
+explícitamente si se mantiene al controlar por edad, sexo y otras
+características sociodemográficas. No buscamos replicar los hallazgos de
+cohorte ---las fuentes de datos y los diseños no son comparables---,
+sino aportar evidencia complementaria desde un enfoque metodológico
+distinto.
 
 \section{Marco conceptual}\label{marco-conceptual}
 
-{[}Desarrolle aquí el marco conceptual.{]}
+\textbf{Cafeína e ingesta dietética.} La cafeína es un alcaloide
+estimulante presente de forma natural en el café, el té y otros
+alimentos, y es la sustancia psicoactiva de consumo legal más extendida
+en el mundo. En NHANES se estima mediante un recordatorio dietético de
+24 horas (\texttt{DR1TCAFF}, en mg/día); al ser un único día de
+recordatorio, esta medición refleja un consumo puntual y no
+necesariamente el patrón habitual del participante, lo que constituye
+una fuente de error de medición a tener en cuenta al interpretar los
+resultados (\citeproc{ref-moshfegh2008ampm}{Moshfegh et~al. 2008}).
+
+\textbf{Enfermedad cardiovascular (ECV) autorreportada.} La variable
+\texttt{ecv} no corresponde a un diagnóstico clínico verificado por el
+equipo investigador, sino a que el participante informe si un
+profesional de salud le dijo alguna vez que tiene enfermedad coronaria,
+que tuvo un infarto o que tuvo un accidente cerebrovascular. Esto es
+habitual en encuestas de salud, pero implica que \texttt{ecv} está
+sujeta a los sesgos propios del autorreporte ---olvido, desconocimiento
+del diagnóstico o diferencias en el acceso a servicios de salud---
+(\citeproc{ref-okura2004agreement}{Okura et~al. 2004}), por lo que la
+prevalencia estimada debe entenderse como \emph{autorreportada} y no
+necesariamente como prevalencia clínica real.
+
+\textbf{Asociación, confusión y causalidad en diseños transversales.} Un
+estudio transversal observa la exposición (cafeína) y el desenlace (ECV
+autorreportada) en un mismo momento, sin seguimiento en el tiempo; esto
+permite estimar asociaciones, pero no establecer la secuencia temporal
+entre exposición y desenlace ni, por tanto, inferir causalidad
+(\citeproc{ref-hernan2020causal}{Hernán y Robins 2020}). Una
+\textbf{variable de confusión} ---como la edad o el sexo--- está
+asociada simultáneamente con la exposición y con el desenlace, y puede
+generar o distorsionar una asociación aparente entre ambos sin que
+exista una relación causal directa. Controlar estadísticamente la
+confusión, mediante estratificación o modelos de regresión múltiple,
+permite ver si una asociación observada se mantiene, se atenúa o
+desaparece al considerar estas características, pero no reemplaza las
+condiciones necesarias para hablar de causalidad. Por esta razón, en
+este documento se usa siempre el término ``asociación'' y se evita
+llamar a la cafeína, en sentido causal, factor de riesgo o de protección
+frente a la ECV.
+
+\textbf{Diseño muestral complejo de encuestas.} NHANES no selecciona a
+sus participantes mediante muestreo aleatorio simple, sino mediante un
+diseño probabilístico, estratificado y por conglomerados (véase
+Metodología), documentado en las guías analíticas oficiales de la
+encuesta (\citeproc{ref-cdc2022analytic}{Centers for Disease Control and
+Prevention (CDC), National Center for Health Statistics 2022}). Esto
+tiene dos implicaciones: cada participante debe analizarse con un peso
+muestral que permite proyectar los resultados a la población de Estados
+Unidos, y las observaciones de un mismo conglomerado no son
+independientes entre sí, lo que afecta el cálculo de los errores
+estándar. Ignorar estos elementos del diseño subestima los errores
+estándar y sobreestima la significancia de las asociaciones encontradas.
 
 \section{Metodología}\label{metodologuxeda}
 
 \subsection{Enfoque y diseño de
 investigación}\label{enfoque-y-diseuxf1o-de-investigaciuxf3n}
 
-La investigación se desarrolla bajo un enfoque cuantitativo, dado que se
-utilizan variables medibles y procedimientos estadísticos para estudiar
-la asociación entre la ingesta diaria de cafeína y la prevalencia
-autorreportada de enfermedad cardiovascular en adultos de Estados
-Unidos. Asimismo, se incorporan características sociodemográficas, como
-la edad y el sexo, para evaluar la asociación ajustada por posibles
-factores de confusión.
+La investigación tiene un enfoque cuantitativo: usa variables medibles y
+procedimientos estadísticos para evaluar la asociación entre la ingesta
+diaria de cafeína y la prevalencia autorreportada de ECV, incorporando
+edad, sexo y otras características sociodemográficas para ajustar por
+posibles factores de confusión.
 
-El estudio es de tipo observacional y analítico, puesto que no se
-interviene sobre la ingesta de cafeína ni se asignan exposiciones a los
-participantes, sino que se analizan los datos recolectados previamente
-por la National Health and Nutrition Examination Survey (NHANES) durante
-el período 2017--2018. Su propósito es evaluar la existencia y magnitud
-de una asociación entre las variables de interés, considerando otras
-características de los participantes.
-
-El diseño es no experimental y transversal, dado que se emplea
-información correspondiente a un único ciclo de la encuesta, sin
-realizar seguimiento de los participantes a lo largo del tiempo. Aunque
-NHANES tiene componentes de recolección en diferentes momentos, el
-presente estudio utiliza los datos del ciclo 2017--2018 para examinar la
-ingesta de cafeína y los antecedentes autorreportados de enfermedad
-cardiovascular. En consecuencia, el análisis permite estudiar la
-asociación entre las variables y la prevalencia de la condición, pero no
-establecer una relación temporal ni concluir causalidad.
-
-Esta elección metodológica es coherente con la pregunta de
-investigación, ya que permite evaluar si la ingesta diaria de cafeína se
-asocia con la prevalencia autorreportada de enfermedad cardiovascular en
-adultos de Estados Unidos, una vez consideradas la edad, el sexo y otras
-características sociodemográficas, mediante técnicas estadísticas de
-análisis multivariable.
+Es un estudio observacional, analítico, no experimental y transversal:
+no se interviene sobre la ingesta de cafeína ni se asignan exposiciones
+a los participantes, sino que se analizan datos ya recolectados por
+NHANES en el ciclo 2017--2018, correspondientes a un único momento en el
+tiempo. Esto permite evaluar la existencia y magnitud de una asociación
+entre las variables de interés, pero no establecer una relación temporal
+ni concluir causalidad ---justo lo que exige la pregunta de
+investigación.
 
 \subsection{Población, unidad de análisis y
 muestra}\label{poblaciuxf3n-unidad-de-anuxe1lisis-y-muestra}
 
-\subsubsection{Población objetivo.}\label{poblaciuxf3n-objetivo.}
+La población objetivo de NHANES 2017--2018 es la población civil no
+institucionalizada de Estados Unidos, sobre la cual la encuesta recoge
+información demográfica, socioeconómica, nutricional y de salud mediante
+entrevistas, exámenes físicos y pruebas de laboratorio. La unidad de
+análisis es cada participante que cumpla los criterios de inclusión del
+estudio; como se trabaja con una base de datos pública ya existente
+(NCHS/CDC), no se realiza un nuevo proceso de selección muestral, sino
+que se usan los registros ya recolectados por la encuesta original.
 
-La población objetivo de la National Health and Nutrition Examination
-Survey (NHANES) 2017--2018 está constituida por la población civil no
-institucionalizada residente en los Estados Unidos. La encuesta recoge
-información sobre las características demográficas, socioeconómicas,
-nutricionales y de salud de los participantes, mediante entrevistas,
-exámenes físicos y pruebas de laboratorio, según el componente evaluado.
+\subsubsection{Diseño muestral}\label{diseuxf1o-muestral}
 
-\subsubsection{Unidad de análisis.}\label{unidad-de-anuxe1lisis.}
+NHANES usa un muestreo probabilístico, estratificado, por conglomerados
+y multietápico (condados, segmentos censales, viviendas y personas), con
+probabilidades desiguales de selección y sobremuestreo de ciertos grupos
+poblacionales, documentado en las guías analíticas oficiales de la
+encuesta (\citeproc{ref-cdc2022analytic}{Centers for Disease Control and
+Prevention (CDC), National Center for Health Statistics 2022}). Por eso
+el análisis debe incorporar los pesos muestrales y las variables de
+diseño: como la cafeína y la energía total provienen del recordatorio
+dietético, el peso que corresponde usar es el del día 1 de recordatorio
+(\texttt{WTDRD1}) y no el de entrevista (\texttt{WTINT2YR}) ni el del
+examen físico (\texttt{WTMEC2YR}); \texttt{SDMVSTRA} y \texttt{SDMVPSU}
+se usarán como estrato y conglomerado en un diseño de encuesta tipo
+\texttt{svydesign} en R, de modo que los errores estándar reflejen la
+falta de independencia entre observaciones de un mismo conglomerado.
 
-La unidad de análisis corresponde a las personas participantes de la
-encuesta que cumplen los criterios de inclusión definidos para el
-estudio. La selección específica de la población analítica dependerá de
-las variables consideradas y de la disponibilidad de información
-completa para el análisis.
+\textbf{Criterios de inclusión y exclusión.} Se incluyen los
+participantes del ciclo 2017--2018 que cumplan los criterios de
+elegibilidad y dispongan de información válida en las variables
+requeridas; se excluyen los registros que no cumplan dichos criterios o
+que carezcan de información indispensable, de acuerdo con la estrategia
+definida para el manejo de datos faltantes.
 
-\subsubsection{Marco o fuente de
-información.}\label{marco-o-fuente-de-informaciuxf3n.}
-
-Se utilizarán datos secundarios de acceso público provenientes de NHANES
-2017--2018, disponibles a través del National Center for Health
-Statistics (NCHS), perteneciente a los Centers for Disease Control and
-Prevention (CDC). Por tanto, no se realizará un nuevo proceso de
-selección muestral, sino que se trabajará con los registros recolectados
-por la encuesta original.
-
-\subsubsection{Diseño muestral.}\label{diseuxf1o-muestral.}
-
-NHANES emplea un diseño de muestreo probabilístico, estratificado, por
-conglomerados y multietápico, cuyo propósito es obtener estimaciones
-representativas de la población civil no institucionalizada de los
-Estados Unidos. El proceso de selección comprende cuatro etapas
-principales: (i) selección de unidades primarias de muestreo,
-constituidas por condados o grupos de condados; (ii) selección de
-segmentos geográficos dentro de dichas unidades, definidos a partir de
-bloques censales o agrupaciones de estos; (iii) selección de viviendas u
-otras unidades residenciales dentro de los segmentos elegidos; y (iv)
-selección de personas elegibles dentro de los hogares participantes.
-
-El diseño contempla probabilidades desiguales de selección y
-sobremuestreo de determinados grupos poblacionales para mejorar la
-precisión de las estimaciones en subpoblaciones de interés. En
-consecuencia, el análisis estadístico deberá considerar las
-ponderaciones muestrales y las variables de estratificación y
-conglomeración correspondientes al componente de NHANES utilizado.
-
-\textbf{Criterios de inclusión y exclusión.} Se incluirán los
-participantes pertenecientes al ciclo 2017--2018 que cumplan los
-criterios de elegibilidad establecidos para la población de interés y
-dispongan de información válida para las variables requeridas. Se
-excluirán del análisis los registros que no cumplan dichos criterios o
-que carezcan de información indispensable para las variables
-principales, de acuerdo con la estrategia definida para el manejo de
-datos faltantes. Estos criterios se precisarán según la pregunta de
-investigación y las variables seleccionadas.
-
-\textbf{Tamaño de muestra.} No se calculará un nuevo tamaño de muestra,
-dado que se utilizará una base de datos existente. El tamaño de la
-muestra analítica estará determinado por los participantes del ciclo
-2017--2018 que cumplan los criterios de inclusión y cuenten con la
-información necesaria para el estudio.
+\textbf{Tamaño de muestra.} No se calcula un tamaño nuevo, dado que se
+usa una base de datos existente; la muestra analítica queda determinada
+por los participantes del ciclo 2017--2018 que cumplan los criterios de
+inclusión y cuenten con la información necesaria.
 
 \subsection{Variables e indicadores}\label{variables-e-indicadores}
 
@@ -470,221 +517,210 @@ instrumentos}\label{fuentes-de-informaciuxf3n-e-instrumentos}
 
 \subsubsection{Fuentes}\label{fuentes}
 
-Los datos utilizados en el estudio provienen de la \emph{National Health
-and Nutrition Examination Survey} (NHANES), correspondiente al ciclo
-2017--2018. Esta encuesta es desarrollada por el \emph{National Center
-for Health Statistics} (NCHS), entidad perteneciente a los \emph{Centers
-for Disease Control and Prevention} (CDC) de los Estados Unidos. Su
-objetivo es caracterizar el estado de salud y nutrición de la población
-mediante información demográfica, socioeconómica, de salud y de
-comportamiento, así como mediciones físicas y pruebas de laboratorio.
-
-NHANES utiliza un diseño de muestreo probabilístico, estratificado, por
-conglomerados y multietápico, dirigido a la población civil no
-institucionalizada residente en los Estados Unidos. La información se
-obtiene mediante entrevistas domiciliarias y evaluaciones realizadas en
-centros de examen móviles, de acuerdo con los componentes de la
-encuesta.
-
-Para este estudio se emplearán datos secundarios de acceso público,
-disponibles en el portal oficial de NHANES. En particular, se utilizará
-información del cuestionario de condiciones médicas (\emph{Medical
-Conditions Questionnaire}), que incluye antecedentes de enfermedades
-reportados por los participantes. A partir de las variables
-correspondientes a accidente cerebrovascular, enfermedad coronaria e
-infarto de miocardio, se construirá una variable derivada denominada
-\texttt{ecv}, que identificará a las personas que reporten al menos uno
-de estos antecedentes.
-
-Dado que se utilizará una base de datos existente, no se realizará
-recolección primaria de información. El procesamiento comprenderá la
-selección de las variables pertinentes, la revisión de los códigos de
-respuesta y de los valores faltantes, la construcción de la variable
-derivada y la aplicación de los criterios de inclusión y exclusión
-definidos para el análisis. Asimismo, se tendrán en cuenta las
-características del diseño muestral de NHANES en los análisis
-estadísticos, cuando corresponda.
+Los datos provienen de NHANES 2017--2018, encuesta del National Center
+for Health Statistics (NCHS), perteneciente a los Centers for Disease
+Control and Prevention (CDC), que caracteriza el estado de salud y
+nutrición de la población mediante entrevistas domiciliarias y
+evaluaciones en centros de examen móviles. Se usarán datos secundarios
+de acceso público, en particular el cuestionario de condiciones médicas
+(\emph{Medical Conditions Questionnaire}), de donde se construye la
+variable derivada \texttt{ecv} a partir de los antecedentes de accidente
+cerebrovascular, enfermedad coronaria e infarto de miocardio. No se hará
+recolección primaria: el trabajo consiste en seleccionar las variables
+pertinentes, revisar códigos y valores faltantes, construir \texttt{ecv}
+y aplicar los criterios de inclusión, considerando el diseño muestral de
+NHANES cuando corresponda.
 
 \subsubsection{Instrumentos}\label{instrumentos}
 
-{[}Describa aquí las fuentes de información y los instrumentos.{]}
+La información proviene de tres instrumentos de NHANES, aplicados por
+personal entrenado del NCHS. El cuestionario sociodemográfico
+(\emph{Demographics}) se administra mediante entrevista asistida por
+computador en el hogar y aporta edad, sexo, raza, nivel educativo y
+razón ingreso/pobreza. El recordatorio dietético de 24 horas
+(\emph{Dietary Interview}) se aplica en el centro de examen móvil con el
+método automatizado \emph{USDA Automated Multiple-Pass Method}
+(\citeproc{ref-moshfegh2008ampm}{Moshfegh et~al. 2008}), y de ahí vienen
+la cafeína (\texttt{DR1TCAFF}), la energía total (\texttt{DR1TKCAL}) y
+el peso muestral asociado (\texttt{WTDRD1}). El cuestionario de
+condiciones médicas (\emph{Medical Conditions Questionnaire}) aporta los
+antecedentes autorreportados usados para construir \texttt{ecv}. Son
+instrumentos ya estandarizados y validados por el NCHS; el papel del
+equipo investigador se limita a seleccionar, integrar y analizar las
+variables pertinentes.
 
 \subsection{Procedimiento}\label{procedimiento}
 
 \subsubsection{Integración de las bases de
 datos}\label{integraciuxf3n-de-las-bases-de-datos}
 
-Para el desarrollo del análisis se utilizaron tres bases de datos de la
-encuesta NHANES, correspondientes al ciclo 2017--marzo de 2020
-(\emph{pre-pandemic}), identificadas mediante los archivos
-\texttt{DEMO\_J.xpt}, \texttt{DR1TOT\_J.xpt} y \texttt{MCQ\_J.xpt}. De
-cada base se seleccionaron únicamente las variables de interés para el
-estudio.
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{DEMO\_J (Demographics):} contiene información sociodemográfica
-  de los participantes, necesaria para caracterizar la población de
-  estudio.
-\item
-  \textbf{DR1TOT\_J (Dietary Interview -- Total Nutrient Intakes, First
-  Day):} contiene información sobre la ingesta dietética total y el
-  consumo de nutrientes durante el primer día de recordatorio
-  alimentario. De esta base se extrajeron las variables dietéticas
-  requeridas para el análisis.
-\item
-  \textbf{MCQ\_J (Medical Conditions):} contiene información relacionada
-  con las condiciones médicas reportadas por los participantes. Se
-  seleccionaron las variables necesarias para identificar las
-  condiciones de salud consideradas en el estudio.
-\end{itemize}
-
-Posteriormente, las tres bases se integraron mediante el identificador
-único de cada participante (\texttt{SEQN}), utilizando un \emph{inner
-join}. Este procedimiento permitió conservar únicamente los
-participantes presentes en las tres fuentes de información y reunir sus
-características sociodemográficas, dietéticas y de salud en una sola
-base de datos.
-
-Como resultado de este proceso de integración, se obtuvo una base de
-datos consolidada con \textbf{8.366 registros}, cada uno correspondiente
-a un participante que contaba con información en las tres bases
-originales. Esta base constituyó el punto de partida para los procesos
-posteriores de depuración, selección de variables y definición de la
-muestra analítica.
+Se usaron tres archivos de NHANES correspondientes al ciclo 2017--marzo
+de 2020 (\emph{pre-pandemic}): \texttt{DEMO\_J.xpt} (demografía),
+\texttt{DR1TOT\_J.xpt} (ingesta dietética total, primer día) y
+\texttt{MCQ\_J.xpt} (condiciones médicas), de los cuales se
+seleccionaron solo las variables de interés para el estudio. Las tres
+bases se integraron mediante el identificador único de cada participante
+(\texttt{SEQN}) con un \emph{inner join}, conservando solo a quienes
+tenían información en las tres fuentes. El resultado fue una base
+consolidada de \textbf{8.366 registros}, punto de partida para la
+depuración posterior.
 
 \subsubsection{Selección de la población
 estudio}\label{selecciuxf3n-de-la-poblaciuxf3n-estudio}
 
 Se restringió la población analítica a participantes de 20 años o más,
-debido a que las preguntas del cuestionario de condiciones médicas
-utilizadas para construir la variable de enfermedad cardiovascular se
-dirigen a este grupo etario. Este criterio permite mantener la
-coherencia entre la población de estudio, la disponibilidad de la
-variable de respuesta y la pregunta de investigación.
-
-Después de aplicar el criterio de inclusión de participantes de 20 años
-o más, la base de datos pasó de 8.366 a 5.265 registros.
+porque las preguntas del cuestionario de condiciones médicas usadas para
+construir la ECV se dirigen a ese grupo etario. Tras este filtro, la
+base pasó de 8.366 a 5.265 registros.
 
 \subsubsection{Tratamiento de datos faltantes y estrategia de
 análisis}\label{tratamiento-de-datos-faltantes-y-estrategia-de-anuxe1lisis}
 
-Posteriormente, se evaluó la presencia de valores faltantes en las
-variables de ingesta diaria de cafeína (\texttt{DR1TCAFF}), ingesta
-energética total (\texttt{DR1TKCAL}) y razón entre el ingreso familiar y
-el umbral federal de pobreza (\texttt{INDFMPIR}). Se identificaron 523
-participantes con información faltante en las variables dietarias y 697
-con información faltante en el PIR. La revisión de los patrones de
-ausencia mostró que los faltantes de cafeína y energía coincidían en los
-mismos participantes, mientras que los correspondientes al PIR
-presentaban una superposición parcial con los anteriores.
+Se evaluaron los valores faltantes en cafeína (\texttt{DR1TCAFF}),
+energía (\texttt{DR1TKCAL}) y razón ingreso/pobreza (\texttt{INDFMPIR}):
+523 participantes sin información dietaria y 697 sin PIR, con los
+faltantes de cafeína y energía coincidiendo en las mismas personas
+---provienen del mismo instrumento--- y una superposición solo parcial
+con los de PIR. En total, 1.081 de los 5.265 participantes (20,5 \%)
+presentaron algún faltante en estas variables; además, las respuestas no
+concluyentes de \texttt{DMDEDUC2} se trataron como faltantes, y un
+registro quedó sin información suficiente para \texttt{ecv}. Tras
+aplicar los criterios de inclusión y disponibilidad de información, la
+muestra analítica preliminar de casos completos quedó en \textbf{4.180
+participantes}.
 
-En total, 1.081 de los 5.265 participantes que cumplían el criterio de
-edad presentaron información faltante en al menos una de estas
-variables, lo que representa el 20,5 \% de la población elegible.
-Adicionalmente, durante la recodificación del nivel educativo
-(\texttt{DMDEDUC2}), los códigos correspondientes a respuestas no
-concluyentes se trataron como valores faltantes, de acuerdo con la
-codificación original de la encuesta. Asimismo, se identificó un
-registro con información insuficiente para determinar el desenlace de
-enfermedad cardiovascular autorreportada (\texttt{ecv}). Una vez
-aplicados los criterios de inclusión y disponibilidad de información, se
-estableció una muestra analítica preliminar de casos completos de 4.180
-participantes adultos, cifra que deberá corresponder al resultado
-verificado de la depuración final.
+El análisis principal usará una estrategia de casos completos
+(\emph{complete-case analysis}): la regresión logística incluirá solo a
+los participantes con información válida en el desenlace y en todas las
+covariables del modelo. Esto da una muestra analítica consistente para
+estimar los \emph{odds ratios} ajustados, pero su validez depende de los
+supuestos sobre el mecanismo de ausencia
+(\citeproc{ref-little2020statistical}{Little y Rubin 2020}); no se
+asumirá que las estimaciones están libres de sesgo solo porque los
+faltantes se concentren en las covariables. Como diagnóstico, se
+compararon los casos completos e incompletos: edad media de 51,2 frente
+a 52,2 años, 51,4 \% frente a 53,2 \% de mujeres, y 10,4 \% frente a 9,0
+\% de prevalencia de ECV ---diferencias que describen a ambos grupos,
+pero no bastan para descartar sesgo por exclusión.
 
-Para el análisis principal de la asociación entre la ingesta de cafeína
-y los antecedentes autorreportados de enfermedad cardiovascular, se
-utilizará una estrategia de análisis de casos completos
-(\emph{complete-case analysis}). En consecuencia, la regresión logística
-multivariada incluirá únicamente a los participantes con información
-válida y observada en el desenlace y en todas las variables explicativas
-y de ajuste incorporadas en el modelo. Esta decisión permite definir una
-muestra analítica consistente para la estimación de los \emph{odds
-ratios} ajustados. No obstante, de acuerdo con Little y Rubin
-(\citeproc{ref-little2020statistical}{2020}) (2019, cap. 3), la validez
-de este procedimiento depende de los supuestos relativos al mecanismo de
-ausencia y a la estructura del modelo; por tanto, no se asumirá que las
-estimaciones están libres de sesgo únicamente porque los faltantes se
-concentren en las covariables.
-
-Como parte del diagnóstico de los datos faltantes, se compararon
-descriptivamente algunas características de los participantes con
-información completa e incompleta. La edad media fue de 51,2 años entre
-los casos completos y de 52,2 años entre los incompletos; la proporción
-de mujeres fue del 51,4 \% y del 53,2 \%, respectivamente. La
-prevalencia descriptiva de enfermedad cardiovascular autorreportada fue
-del 10,4 \% en el grupo completo y del 9,0 \% en el incompleto. Estas
-diferencias permiten caracterizar ambos grupos, pero no son suficientes
-para determinar el mecanismo de ausencia ni para descartar posibles
-sesgos derivados de la exclusión de registros.
-
-Como estrategia complementaria, se propone realizar un análisis de
-sensibilidad mediante imputación múltiple, siempre que la evaluación de
-los patrones de ausencia y la información disponible permitan justificar
-este procedimiento. Para ello, se generarán varias bases de datos
-imputadas mediante un modelo que considere el desenlace, las variables
-explicativas y de ajuste, y otras variables auxiliares pertinentes. La
-regresión logística se estimará en cada base imputada y los resultados
-se combinarán mediante las reglas de Rubin
-(\citeproc{ref-little2020statistical}{Little y Rubin 2020}), teniendo en
-cuenta las particularidades del diseño muestral de NHANES.
-Posteriormente, se compararán los \emph{odds ratios} ajustados y sus
-intervalos de confianza con los obtenidos en el análisis principal de
-casos completos, con el propósito de evaluar la robustez de las
-conclusiones frente al tratamiento de los datos faltantes.
-
-Finalmente, se reconoce que el análisis de casos completos puede reducir
-la precisión de las estimaciones y modificar la composición de la
-muestra analítica. Por ello, la comparación con los resultados de la
-imputación múltiple permitirá examinar si las conclusiones sustantivas
-dependen de la estrategia utilizada para tratar los faltantes. La
-interpretación definitiva de las estimaciones considerará, además, los
-pesos, estratos y unidades primarias de muestreo correspondientes al
-diseño complejo de NHANES.
+Como análisis de sensibilidad complementario, si los patrones de
+ausencia lo justifican, se generarán varias bases imputadas, se estimará
+la regresión logística en cada una y los resultados se combinarán
+mediante las reglas de Rubin
+(\citeproc{ref-little2020statistical}{Little y Rubin 2020}),
+considerando el diseño muestral de NHANES. Comparar estos resultados con
+los del análisis de casos completos permitirá valorar si las
+conclusiones dependen de la estrategia usada para tratar los faltantes.
 
 \subsubsection{Valores atípicos y
 consistencia}\label{valores-atuxedpicos-y-consistencia}
 
-En cuanto a la revisión de valores atípicos, se examinarán la
-distribución, los rangos y los valores extremos de las variables
-cuantitativas, especialmente la ingesta de cafeína, la ingesta
-energética y la edad. Se utilizarán resúmenes estadísticos y
-representaciones gráficas, como histogramas y diagramas de caja, para
-identificar observaciones potencialmente inusuales. Los valores extremos
-no se eliminarán automáticamente, dado que pueden corresponder a
-consumos reales; cualquier corrección o exclusión requerirá evidencia de
-error de registro, inconsistencia con la documentación de la encuesta o
-una justificación metodológica explícita.
-
-La consistencia de los datos se verificará mediante la revisión de los
-códigos válidos y las categorías de las variables, la detección de
-registros duplicados, la comprobación de los rangos esperados y la
-identificación de posibles contradicciones entre las respuestas de las
-condiciones médicas. También se comprobará que las variables derivadas
-sean coherentes con sus componentes originales y que los valores
-faltantes se propaguen adecuadamente cuando no exista información
-suficiente para realizar una clasificación.
+Para los valores atípicos se revisarán la distribución, los rangos y los
+valores extremos de cafeína, energía y edad, con resúmenes estadísticos
+e histogramas o diagramas de caja; no se eliminarán automáticamente,
+dado que pueden corresponder a consumos reales, salvo que haya evidencia
+de error de registro, inconsistencia con la documentación de la encuesta
+o una justificación metodológica explícita. La consistencia se
+verificará revisando los códigos válidos, los registros duplicados, los
+rangos esperados y posibles contradicciones entre las condiciones
+médicas, además de comprobar que las variables derivadas sean coherentes
+con sus componentes originales y que los faltantes se propaguen
+adecuadamente cuando no haya información suficiente.
 
 \subsubsection{Variables derivadas}\label{variables-derivadas}
 
-Finalmente, se construirán las variables derivadas necesarias para el
-análisis. La variable de enfermedad cardiovascular (ecv) se definirá
-como una variable binaria que toma el valor de uno cuando el
-participante reporta al menos una de las siguientes condiciones:
-enfermedad coronaria, infarto de miocardio o accidente cerebrovascular;
-tomará el valor de cero cuando las tres respuestas indiquen ausencia de
-dichas condiciones. Si las respuestas disponibles no permiten establecer
-ninguna de estas dos situaciones, el desenlace se conservará como
-faltante. Adicionalmente, la ingesta diaria de cafeína se agrupará en
-las categorías de 0 mg, 1-100 mg, 101-200 mg, 201-400 mg y más de 400
-mg. La edad se clasificará en los grupos de 20-39, 40-59 y 60 años o
-más. Estas categorizaciones permitirán describir la distribución de la
-exposición y de las características de los participantes. Se conservarán
-también las variables cuantitativas originales para evitar perder
-información cuando se evalúe la ingesta de cafeína como variable
-continua.
+La variable \texttt{ecv} se definió como binaria: toma el valor de uno
+si el participante reporta al menos una de las siguientes condiciones
+---enfermedad coronaria, infarto o accidente cerebrovascular--- y cero
+si las tres respuestas indican ausencia; si no hay información
+suficiente, el desenlace se conserva como faltante. La ingesta de
+cafeína se agrupó en 0, 1-100, 101-200, 201-400 y más de 400 mg/día, y
+la edad en 20-39, 40-59 y 60 años o más, para describir la exposición y
+las características de los participantes; se conservan también las
+versiones continuas de estas variables para los análisis que las usen
+como tales.
+
+\subsection{Avance: análisis descriptivo
+preliminar}\label{avance-anuxe1lisis-descriptivo-preliminar}
+
+Como avance del proyecto, presentamos una caracterización descriptiva
+preliminar de la muestra de casos completos (n = 4.180), siguiendo el
+procedimiento anterior. Corresponde a una primera aproximación a los
+objetivos 1 y 2. Estas cifras \textbf{no están ponderadas} por el diseño
+muestral de NHANES (no incorporan \texttt{peso\_dieta}, \texttt{estrato}
+ni \texttt{psu}); son solo exploratorias, para verificar que la base se
+comporta de forma razonable antes de pasar a las estimaciones ponderadas
+y ajustadas del plan de análisis, y no deben leerse como representativas
+de la población de Estados Unidos.
+
+\begin{longtable}[]{@{}lr@{}}
+\caption{Distribución sociodemográfica y de consumo de cafeína (n =
+4.180, sin ponderar)}\tabularnewline
+\toprule\noalign{}
+Caracteristica & Porcentaje \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Caracteristica & Porcentaje \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Sexo: Mujer & 51.4 \\
+Sexo: Hombre & 48.6 \\
+Grupo de edad: 20-39 & 30.4 \\
+Grupo de edad: 40-59 & 31.7 \\
+Grupo de edad: 60+ & 37.9 \\
+Cafeina: 0 mg & 15.0 \\
+Cafeina: 1-100 mg & 34.4 \\
+Cafeina: 101-200 mg & 24.5 \\
+Cafeina: 201-400 mg & 19.5 \\
+Cafeina: \textgreater400 mg & 6.6 \\
+\end{longtable}
+
+La muestra tiene una edad media de 51,2 años (rango 20-80), 51,4 \% de
+mujeres y una prevalencia cruda de ECV de 10,4 \%. Por categoría de
+cafeína:
+
+\begin{longtable}[]{@{}lrr@{}}
+\caption{Prevalencia de ECV y edad media por categoría de cafeína (sin
+ponderar, sin ajustar)}\tabularnewline
+\toprule\noalign{}
+Categoría de cafeína & Prevalencia de ECV (\%) & Edad media (años) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Categoría de cafeína & Prevalencia de ECV (\%) & Edad media (años) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 mg & 9.3 & 46.7 \\
+1-100 mg & 9.2 & 50.6 \\
+101-200 mg & 10.4 & 51.7 \\
+201-400 mg & 11.6 & 54.3 \\
+\textgreater400 mg & 16.1 & 53.9 \\
+\end{longtable}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Prevalencia descriptiva (sin ponderar) de ECV autorreportada por categoría de cafeína y por grupo etario.}]{Propuesta_de_investigacion_cafeina_ECV_files/figure-latex/avance-figura-1.pdf}}
+\caption{Prevalencia descriptiva (sin ponderar) de ECV autorreportada
+por categoría de cafeína y por grupo etario.}
+\end{figure}
+
+La prevalencia cruda de ECV sube de forma aproximadamente monótona con
+la categoría de cafeína (9,3 \% en ``0 mg'' a 16,1 \% en
+``\textgreater400 mg''), pero la edad media también sube en el mismo
+sentido (de 46,7 a 53,9 años), y la prevalencia varía mucho más con la
+edad (1,2 \% en 20-39 años frente a 21,1 \% en 60 años o más, ver Figura
+1) que con la cafeína. Este es justo el patrón de confusión anticipado
+en el planteamiento del problema y en el marco conceptual: quienes
+consumen más cafeína tienden a ser, en promedio, un poco mayores, y la
+edad está fuertemente asociada con la ECV. Por tanto, \textbf{no debe
+leerse como evidencia de que la cafeína aumenta el riesgo
+cardiovascular}; es precisamente la motivación de los análisis
+estratificados y ajustados de los objetivos 3 y 4.
 
 \subsection{Plan preliminar de análisis
 estadístico}\label{plan-preliminar-de-anuxe1lisis-estaduxedstico}
@@ -706,119 +742,65 @@ Procedimiento estadístico propuesto
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-1 & Edad, sexo, raza/etnia, nivel educativo, razón ingreso/pobreza ,
-consumo de cafeína y ECV. & Se realizará un análisis descriptivo de las
-características de la población analítica. Para las variables
-categóricas se estimarán frecuencias y porcentajes; para las
-cuantitativas se calcularán medidas de tendencia central y dispersión,
-como media, desviación estándar, mediana y rango intercuartílico, según
-la distribución observada. Se estimarán la prevalencia de ECV y la
-distribución del consumo de cafeína. Se incorporarán los pesos y el
-diseño muestral de NHANES para obtener estimaciones representativas de
-la población objetivo. \\
-2 & ECV (variable dicotómica) y consumo de cafeína & Se estimará la
-prevalencia de ECV en cada categoría de consumo, acompañada de
-intervalos de confianza del 95 \%. Para evaluar si existen diferencias
-entre categorías se empleará una prueba de asociación apropiada para
-encuestas complejas, como la prueba de Rao--Scott, que ajusta la prueba
-de independencia por el diseño muestral. Esto permitirá identificar
-diferencias globales en la prevalencia, sin asumir que estas se deben
-exclusivamente al consumo de cafeína. \\
-3 & Consumo de cafeína, ECV, edad y sexo. & Se comparará la asociación
-observada inicialmente entre cafeína y ECV con la obtenida al considerar
-la edad y el sexo. Además, se estimarán las prevalencias de ECV por
-categoría de cafeína dentro de los grupos etarios definidos (20--39,
-40--59 y 60 años o más), para examinar si la tendencia observada se
-mantiene entre edades. Se considerará la inclusión de términos de
-interacción entre cafeína y edad, y entre cafeína y sexo, en modelos de
-regresión logística, para evaluar si la asociación varía según estas
-características. Así se podrá distinguir entre una relación que cambia
-al controlar estas variables y otra cuya magnitud difiere entre
-grupos. \\
+1 & Edad, sexo, raza/etnia, nivel educativo, razón ingreso/pobreza,
+consumo de cafeína y ECV. & Análisis descriptivo de la población
+analítica: frecuencias y porcentajes para las variables categóricas,
+medidas de tendencia central y dispersión para las cuantitativas,
+incorporando los pesos y el diseño muestral de NHANES. \\
+2 & ECV (variable dicotómica) y consumo de cafeína. & Prevalencia de ECV
+por categoría de cafeína con intervalos de confianza del 95 \%,
+comparadas con una prueba de asociación ajustada por diseño muestral
+complejo (Rao--Scott) (\citeproc{ref-rao1984chisquared}{Rao y Scott
+1984}), sin asumir que las diferencias se deban solo a la cafeína. \\
+3 & Consumo de cafeína, ECV, edad y sexo. & Prevalencia de ECV por
+categoría de cafeína dentro de cada grupo etario (20--39, 40--59, 60+) y
+por sexo, de forma puramente descriptiva, para decidir si edad y sexo
+deben entrar como variables de control ---y posibles interacciones--- en
+el modelo del objetivo 4. \\
 4 & ECV, consumo de cafeína, edad, sexo, raza/etnia, nivel educativo,
-razón ingreso/pobreza y energía total consumida. & Se ajustará un modelo
-de regresión logística para encuestas complejas, con ECV como variable
-dependiente y consumo de cafeína como variable explicativa principal. Se
-incluirán las covariables especificadas para controlar posibles factores
-de confusión. Se reportarán razones de momios (odds ratios, OR)
-ajustadas e intervalos de confianza del 95 \%. El modelo permitirá
-evaluar la asociación entre el consumo de cafeína y la probabilidad de
-reportar antecedentes de ECV, condicionada a las covariables incluidas.
-La interpretación se hará como asociación, no como efecto causal. \\
-5 & Consumo de cafeína en mg/día y ECV, con las mismas covariables de
-ajuste del objetivo 4. & Se comparará el modelo que incorpora cafeína
-como variable continua lineal con un modelo que permita una relación no
-lineal, por ejemplo, mediante splines cúbicos restringidos. Esto
-permitirá examinar si el cambio en la asociación es aproximadamente
-constante a lo largo del consumo o si existen curvaturas o variaciones
-en niveles altos. La forma de la relación se evaluará mediante pruebas
-de no linealidad y la representación gráfica de las asociaciones
-estimadas con sus intervalos de confianza. Este análisis complementará
-el modelo principal sin depender exclusivamente de categorías
-arbitrarias de consumo. \\
-6 & Consumo de cafeína, ECV global y cada evento por separado:
-enfermedad coronaria (MCQ160C), infarto (MCQ160E) y accidente
-cerebrovascular (MCQ160F). & Se realizarán análisis de sensibilidad.
-Primero, se repetirá el modelo principal excluyendo consumos
-inusualmente altos, definidos mediante un criterio explícito y
-documentado, para determinar si las estimaciones dependen de
-observaciones extremas. Segundo, se ajustarán modelos separados para
-cada evento cardiovascular, conservando las covariables y el diseño
-muestral. Se compararán las OR ajustadas, sus intervalos de confianza y
-la dirección y magnitud de las asociaciones con los resultados
-principales. Estos análisis permitirán valorar la robustez de los
-hallazgos y si la asociación difiere según el evento estudiado. \\
+razón ingreso/pobreza y energía total consumida. & Regresión logística
+para encuestas complejas, con ECV como desenlace y cafeína como
+explicativa principal, ajustando por las covariables identificadas en el
+objetivo 3. Se reportarán OR ajustadas con IC 95 \% y, si el objetivo 3
+lo sugiere, se probarán interacciones cafeína×edad y cafeína×sexo. La
+interpretación será siempre como asociación, no como efecto causal. \\
+5 & Consumo de cafeína en mg/día y ECV, con las mismas covariables del
+objetivo 4. & Al modelo del objetivo 4 se le agrega un término
+cuadrático de cafeína; su significancia se evalúa con una prueba de Wald
+ajustada por diseño. Un coeficiente significativo sugiere curvatura
+(forma de ``U'' o ``J''); uno no significativo es consistente con una
+relación aproximadamente lineal. \\
+6 & Consumo de cafeína y cada evento cardiovascular por separado:
+coronaria (MCQ160C), infarto (MCQ160E) y accidente cerebrovascular
+(MCQ160F). & Análisis de sensibilidad: se repite el modelo del objetivo
+4 por separado para cada evento cardiovascular, y se comparan las OR
+ajustadas entre sí y con el resultado principal, para ver si la
+asociación es consistente según el tipo de evento. \\
 \end{longtable}
 }
 
 \subsection{Consideraciones éticas y manejo de la
 información}\label{consideraciones-uxe9ticas-y-manejo-de-la-informaciuxf3n}
 
-El estudio utiliza información secundaria proveniente de la
-\emph{National Health and Nutrition Examination Survey} (NHANES)
-correspondiente al periodo 2017-2018, realizada por el National Center
-for Health Statistics (NCHS) de los Centers for Disease Control and
-Prevention (CDC) de Estados Unidos. Por tanto, no implica el
-reclutamiento de participantes ni la recolección directa de datos por
-parte del equipo investigador.
+El estudio usa información secundaria de NHANES 2017-2018 (NCHS/CDC),
+por lo que no implica reclutamiento de participantes ni recolección
+directa de datos. El consentimiento informado corresponde al proceso
+original de la encuesta; no se solicitará uno nuevo. Se trabajará con la
+base pública, ya desidentificada y sin identificadores personales
+directos, y los resultados se presentarán de forma agregada, evitando
+cualquier intento de reidentificación.
 
-\textbf{Consentimiento informado.} El consentimiento informado
-corresponde al proceso de recolección original de NHANES, en el cual se
-obtiene la autorización de los participantes para su participación en la
-encuesta y los procedimientos asociados. En este estudio no se
-solicitará un nuevo consentimiento, dado que se analizarán datos
-previamente recolectados y disponibles públicamente.
-
-\textbf{Privacidad, confidencialidad y anonimización.} Se utilizará la
-base de datos pública de NHANES, en la que se han aplicado medidas de
-protección de la confidencialidad y no se incluyen identificadores
-personales directos que permitan reconocer a los participantes. El
-análisis se realizará sobre registros individuales desidentificados y
-los resultados se presentarán de forma agregada, evitando cualquier
-intento de identificación o divulgación de información que pueda
-comprometer la privacidad de las personas.
-
-\textbf{Manejo seguro de la información.} Los archivos descargados se
-almacenarán en un entorno de trabajo con acceso controlado y se
-utilizarán exclusivamente para los fines académicos de la investigación.
-Durante la integración, depuración y análisis de las bases de datos se
-conservarán únicamente las variables necesarias para cumplir los
-objetivos del estudio, sin intentar vincular los registros con fuentes
-externas para identificar participantes.
-
-\textbf{Uso responsable y limitaciones.} La información se analizará de
-acuerdo con los lineamientos de uso de datos públicos de NHANES y se
-reconocerá la fuente original. Las conclusiones se formularán
-considerando las limitaciones del diseño observacional y transversal de
-la encuesta, por lo que las asociaciones encontradas entre el consumo de
-cafeína y la enfermedad cardiovascular no se interpretarán como
-evidencia de causalidad.
-
-Dado que se trata de un análisis secundario de datos públicos
-desidentificados, no se prevé contacto con participantes ni recolección
-de información identificable. Los requisitos institucionales aplicables
-a la revisión ética de este tipo de investigación deberán verificarse
-según las normas de la institución académica correspondiente.
+Los archivos se manejarán en un entorno de acceso controlado,
+conservando solo las variables necesarias para los objetivos del
+estudio, sin vincularlas con fuentes externas. El análisis seguirá los
+lineamientos de uso de datos públicos de NHANES, reconociendo la fuente
+original, y las conclusiones respetarán las limitaciones del diseño
+observacional y transversal: las asociaciones entre cafeína y ECV no se
+interpretarán como evidencia de causalidad. Al ser un análisis
+secundario de datos públicos desidentificados, no se prevé contacto con
+participantes ni recolección de información identificable; los
+requisitos institucionales de revisión ética aplicables deberán
+verificarse según las normas de la universidad.
 
 \section{Cronograma}\label{cronograma}
 
@@ -854,24 +836,6 @@ Elaboración del informe final & & & & X \\
 
 \section{Anexos}\label{anexos}
 
-Incluya, cuando corresponda:
-
-\begin{itemize}
-\tightlist
-\item
-  Tablas o gráficas adicionales.\\
-\item
-  Archivos de código R utilizados.\\
-\item
-  Encuestas, modelos o instrumentos.\\
-\item
-  Diccionario de variables o ficha técnica de la base de datos.\\
-\item
-  Discusiones teóricas sobre modelos o metodologías.
-\end{itemize}
-
-\section{Anexos}\label{anexos-1}
-
 \textbf{Anexo 1. Diccionario de variables de la base analítica.}
 
 {\def\LTcaptype{none} % do not increment counter
@@ -906,7 +870,11 @@ más) \\
 \texttt{kcal} & DR1TKCAL & Energía total ingerida en el día &
 kcal/día \\
 \texttt{peso\_dieta} & WTDRD1 & Peso muestral del recordatorio dietario
-& Numérico \\
+(día 1) & Numérico \\
+\texttt{estrato} & SDMVSTRA & Estrato de muestreo para análisis de
+diseño complejo & Numérico \\
+\texttt{psu} & SDMVPSU & Unidad primaria de muestreo para análisis de
+diseño complejo & Numérico \\
 \texttt{coronaria} & MCQ160C & Diagnóstico autorreportado de enfermedad
 coronaria & 1 = sí, 0 = no \\
 \texttt{infarto} & MCQ160E & Diagnóstico autorreportado de infarto & 1 =
@@ -930,6 +898,11 @@ Centers for Disease Control and Prevention (CDC), National Center for
 Health Statistics. 2018. \emph{National Health and Nutrition Examination
 Survey Data 2017--2018}. U.S. Department of Health; Human Services.
 
+\bibitem[\citeproctext]{ref-cdc2022analytic}
+Centers for Disease Control and Prevention (CDC), National Center for
+Health Statistics. 2022. \emph{National Health and Nutrition Examination
+Survey: Analytic Guidelines}. U.S. Department of Health; Human Services.
+
 \bibitem[\citeproctext]{ref-ding2014coffee}
 Ding, Ming, Shilpa N. Bhupathiraju, Ambika Satija, Rob M. van Dam, y
 Frank B. Hu. 2014. {«Long-term coffee consumption and risk of
@@ -937,17 +910,39 @@ cardiovascular disease: a systematic review and a dose-response
 meta-analysis of prospective cohort studies»}. \emph{Circulation} 129
 (6): 643-59.
 
+\bibitem[\citeproctext]{ref-hernan2020causal}
+Hernán, Miguel A., y James M. Robins. 2020. \emph{Causal Inference: What
+If}. Chapman \& Hall/CRC.
+
 \bibitem[\citeproctext]{ref-little2020statistical}
 Little, Roderick J. A., y Donald B. Rubin. 2020. \emph{Statistical
 Analysis with Missing Data}. 3rd ed. Wiley Series en Probability y
 Statistics. John Wiley \& Sons.
 \url{https://doi.org/10.1002/9781119482260}.
 
+\bibitem[\citeproctext]{ref-moshfegh2008ampm}
+Moshfegh, Alanna J., Donna G. Rhodes, David J. Baer, et~al. 2008. {«The
+US Department of Agriculture Automated Multiple-Pass Method reduces bias
+in the collection of energy intakes»}. \emph{The American Journal of
+Clinical Nutrition} 88 (2): 324-32.
+
+\bibitem[\citeproctext]{ref-okura2004agreement}
+Okura, Yukari, Lenore H. Urban, Daniel W. Mahoney, Steven J. Jacobsen, y
+Richard J. Rodeheffer. 2004. {«Agreement between self-report
+questionnaires and medical record data was substantial for diabetes,
+hypertension, myocardial infarction and stroke but not for heart
+failure»}. \emph{Journal of Clinical Epidemiology} 57 (10): 1096-103.
+
 \bibitem[\citeproctext]{ref-poole2017coffee}
 Poole, Robin, Oliver J. Kennedy, Paul Roderick, Jonathan A. Fallowfield,
 Peter C. Hayes, y Julie Parkes. 2017. {«Coffee consumption and health:
 umbrella review of meta-analyses of multiple health outcomes»}.
 \emph{BMJ} 359: j5024.
+
+\bibitem[\citeproctext]{ref-rao1984chisquared}
+Rao, J. N. K., y A. J. Scott. 1984. {«On Chi-Squared Tests for Multiway
+Contingency Tables with Cell Proportions Estimated from Survey Data»}.
+\emph{The Annals of Statistics} 12 (1): 46-60.
 
 \bibitem[\citeproctext]{ref-stevens2021coffee}
 Stevens, Laura M., Erin Linstead, Jennifer L. Hall, y David P. Kao.
