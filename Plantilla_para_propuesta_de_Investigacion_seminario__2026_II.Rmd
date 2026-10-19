@@ -1,0 +1,164 @@
+---
+title: |
+  \textcolor{blue}{Propuesta de investigación }
+  
+author: |
+  **Maria Paula Camargo**^[mcamargori.edu.co], Universidad Nacional de Colombia  
+  **Karen Barrantes **^[kbarrantes@unal.edu.co], Universidad Nacional de Colombia  
+  
+institute: |
+  Departamento de Estadística  
+  Facultad de Ciencias  
+  Universidad Nacional de Colombia  
+  Bogotá, Colombia
+
+abstract: |
+  Esta propuesta busca estudiar la relación entre el teletrabajo y la 
+  productividad laboral, considerando tanto la modalidad e intensidad del 
+  teletrabajo como características laborales y sociodemográficas de los 
+  trabajadores. Se propone un enfoque cuantitativo basado en la recolección 
+  y análisis estadístico de información que permita describir la población, 
+  evaluar asociaciones entre las variables e identificar factores relacionados 
+  con diferencias en productividad.
+
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+    latex_engine: xelatex
+lang: es
+
+fontsize: 12pt
+geometry: margin=2.5cm
+
+bibliography: bibliografia_seminario.bib
+
+nocite: |
+  @*
+
+link-citations: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Problema de investigación
+
+## Tema o título
+
+**Teletrabajo y productividad laboral.**
+
+## Planteamiento del problema
+
+La expansión del teletrabajo ha modificado las condiciones en las que se
+desarrollan numerosas actividades laborales. La posibilidad de realizar
+las tareas fuera de las instalaciones tradicionales de la organización
+puede estar acompañada de ventajas relacionadas con la flexibilidad, la
+reducción de los tiempos de desplazamiento y una mayor autonomía del
+trabajador. Sin embargo, también puede estar asociada con dificultades
+relacionadas con la comunicación, la coordinación, el acceso a recursos
+tecnológicos, las condiciones del lugar de trabajo y la separación entre
+las actividades laborales y personales.
+
+En este contexto, no resulta evidente si los niveles de productividad
+laboral difieren según la modalidad o la intensidad del teletrabajo.
+Además, la productividad puede estar asociada con otras características
+laborales y sociodemográficas, como el tipo de ocupación, las horas
+trabajadas, la experiencia laboral, las condiciones tecnológicas, la
+autonomía y las características de la organización.
+
+Por tanto, resulta pertinente estudiar estadísticamente si existe
+asociación entre la modalidad e intensidad del teletrabajo y la
+productividad laboral, considerando simultáneamente otras
+características laborales y sociodemográficas que también puedan estar
+asociadas con la productividad. Este análisis permitirá establecer si
+las diferencias observadas en productividad se mantienen después de
+considerar estadísticamente dichas características.
+
+## Pregunta de investigación
+
+**¿Qué relación, si la hay, existe entre la modalidad e intensidad del
+teletrabajo y la productividad laboral de los empleados de empresas de
+diseño gráfico de Bogotá durante el año 2025, y cómo varía esta relación
+según características laborales y sociodemográficas?**
+
+# Justificación
+
+El estudio del teletrabajo y su relación con la productividad es
+relevante tanto desde una perspectiva académica como organizacional. La
+adopción de modalidades de trabajo remoto o híbrido plantea la necesidad
+de disponer de evidencia empírica que permita establecer si las
+diferencias en la modalidad e intensidad del teletrabajo están asociadas
+con cambios en los niveles de productividad.
+
+Desde el punto de vista **estadístico**, el problema permite estudiar
+simultáneamente una variable de resultado ---la productividad laboral---
+y un conjunto de posibles variables explicativas relacionadas con las
+características del teletrabajo, del puesto y del trabajador. Esto
+permite aplicar procedimientos descriptivos e inferenciales dirigidos a
+estimar asociaciones, comparar grupos e identificar los factores que
+explican en mayor medida las diferencias de productividad.
+
+Desde el punto de vista **práctico**, los resultados pueden aportar
+información para orientar decisiones relacionadas con la implementación
+de esquemas presenciales, híbridos o remotos, así como para identificar
+las condiciones bajo las cuales el teletrabajo puede estar asociado con
+mejores resultados laborales.
+
+La investigación también puede contribuir a distinguir el efecto
+aparente del teletrabajo de la influencia de otras características de
+los trabajadores y de sus condiciones laborales. Esta distinción es
+importante para evitar conclusiones basadas únicamente en comparaciones
+simples entre trabajadores presenciales y remotos.
+
+Finalmente, el estudio es pertinente para la formación estadística
+porque requiere traducir un problema sustantivo en variables medibles,
+formular hipótesis contrastables y seleccionar procedimientos
+estadísticos coherentes con la naturaleza de los datos y con los
+alcances del diseño de investigación.
+
+# Objetivos
+
+## Objetivo general
+
+**Evaluar si la modalidad e intensidad del teletrabajo están asociadas
+con la productividad laboral de los empleados de empresas de diseño
+gráfico de Bogotá durante el año 2025, considerando características
+laborales y sociodemográficas que también puedan estar asociadas con
+dicha productividad.**
+
+## Objetivos específicos
+
+1.  **Caracterizar** a los empleados según sus características
+    sociodemográficas y laborales, la modalidad e intensidad del
+    teletrabajo y sus indicadores de productividad laboral.
+
+2.  **Describir y comparar** los niveles de productividad laboral entre
+    empleados con diferentes modalidades e intensidades de teletrabajo.
+
+3.  **Identificar** las características laborales y sociodemográficas
+    asociadas con la productividad laboral.
+
+4.  **Evaluar** la asociación entre la modalidad e intensidad del
+    teletrabajo y la productividad laboral, ajustando estadísticamente
+    por características laborales y sociodemográficas relevantes.
+
+5.  **Evaluar**, cuando la información disponible lo permita, si la
+    asociación entre la modalidad e intensidad del teletrabajo y la
+    productividad laboral varía según características laborales o
+    sociodemográficas de los empleados.
+
+# Anexos
+
+Incluye:
+
+- Tablas o gráficas adicionales.\
+- Archivos de código R utilizados.\
+- Encuestas, modelos o instrumentos.\
+- Discusiones teóricas sobre modelos o metodologías.
+
+# Referencias
+
+::: {#refs}
+:::
