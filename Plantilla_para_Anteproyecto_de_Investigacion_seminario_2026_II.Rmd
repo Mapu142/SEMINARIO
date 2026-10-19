@@ -1,0 +1,358 @@
+---
+title: |
+  Anteproyecto de investigación  
+  
+author: |
+  **Adalberto Satiamen**^[adasan@unal.edu.co], Universidad Nacional de Colombia  
+  **Rigoberto Urapan**^[rigurat@unal.edu.co], Universidad Nacional de Colombia  
+  **Lucho Diáspora**^[ldiaspd@unal.edu.co], Universidad Nacional de Colombia  
+  **Xaim Krzn**^[Xkrz@unal.edu.co], Universidad Nacional de Colombia
+  
+institute: |
+  Departamento de Estadística  
+  Facultad de Ciencias  
+  Universidad Nacional de Colombia  
+  Bogotá, Colombia
+
+abstract: |
+  Este anteproyecto amplía la propuesta de investigación mediante la incorporación
+  de antecedentes, marco conceptual y una metodología detallada. El estudio busca
+  analizar la relación entre el teletrabajo y la productividad laboral, considerando
+  la modalidad e intensidad del teletrabajo y características laborales y
+  sociodemográficas de los trabajadores. Se plantea un enfoque cuantitativo y se
+  especifican la población de estudio, las variables, las fuentes de información,
+  los procedimientos de recolección y el plan preliminar de análisis estadístico.
+
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+    latex_engine: xelatex
+
+fontsize: 12pt
+geometry: margin=2.5cm
+
+bibliography: bibliografia_seminario.bib
+
+nocite: |
+  @*
+
+link-citations: true
+
+header-includes:
+  - \usepackage[spanish,es-tabla]{babel}
+  - \usepackage[utf8]{inputenc}
+  - \usepackage[T1]{fontenc}
+  - \usepackage{lmodern}
+  - \usepackage{amsmath,amssymb,amsfonts}
+  - \usepackage{mathtools}
+  - \usepackage{bm}
+  - \usepackage{graphicx}
+  - \usepackage{booktabs}
+  - \usepackage{array}
+---
+
+<!--
+INSTRUCCIÓN GENERAL:
+Este documento continúa la propuesta de investigación. Conserve, revise y mejore
+las secciones 1 a 3 de la propuesta a partir de la retroalimentación recibida.
+Después complete las nuevas secciones del anteproyecto. Sustituya los textos de
+ejemplo y las indicaciones entre corchetes por la información de su investigación.
+-->
+
+# Problema de investigación
+
+## Tema o título
+
+**Teletrabajo y productividad laboral.**
+
+<!-- Revise el título de la propuesta. Debe ser informativo, conciso y coherente
+con la población, las variables principales y el alcance del estudio. -->
+
+## Planteamiento del problema
+
+La expansión del teletrabajo ha modificado las condiciones en las que se 
+desarrollan numerosas actividades laborales. La posibilidad de realizar las 
+tareas fuera de las instalaciones tradicionales de la organización puede estar 
+acompañada de ventajas relacionadas con la flexibilidad, la reducción de los 
+tiempos de desplazamiento y una mayor autonomía del trabajador. Sin embargo, 
+también puede estar asociada con dificultades relacionadas con la comunicación, 
+la coordinación, el acceso a recursos tecnológicos, las condiciones del lugar 
+de trabajo y la separación entre las actividades laborales y personales.
+
+En este contexto, no resulta evidente si los niveles de productividad laboral 
+difieren según la modalidad o la intensidad del teletrabajo. Además, la 
+productividad puede estar asociada con otras características laborales y 
+sociodemográficas, como el tipo de ocupación, las horas trabajadas, la 
+experiencia laboral, las condiciones tecnológicas, la autonomía y las 
+características de la organización.
+
+Por tanto, resulta pertinente estudiar estadísticamente si existe asociación 
+entre la modalidad e intensidad del teletrabajo y la productividad laboral, 
+considerando simultáneamente otras características laborales y 
+sociodemográficas que también puedan estar asociadas con la productividad. 
+Este análisis permitirá establecer si las diferencias observadas en 
+productividad se mantienen después de considerar estadísticamente dichas 
+características.
+
+<!-- En el anteproyecto, fortalezca este apartado con antecedentes y referencias
+que documenten la magnitud, pertinencia o vacío de conocimiento del problema. -->
+
+## Pregunta de investigación
+
+**¿Qué relación, si la hay, existe entre la modalidad e intensidad del 
+teletrabajo y la productividad laboral de los empleados de empresas de diseño 
+gráfico de Bogotá durante el año 2025, y cómo varía esta relación según 
+características laborales y sociodemográficas?**
+
+<!-- Verifique que la pregunta sea susceptible de responderse con los datos y el
+método propuestos. -->
+
+# Justificación
+
+El estudio del teletrabajo y su relación con la productividad es relevante 
+tanto desde una perspectiva académica como organizacional. La adopción de 
+modalidades de trabajo remoto o híbrido plantea la necesidad de disponer de 
+evidencia empírica que permita establecer si las diferencias en la modalidad 
+e intensidad del teletrabajo están asociadas con cambios en los niveles de 
+productividad.
+
+Desde el punto de vista **estadístico**, el problema permite estudiar 
+simultáneamente una variable de resultado ---la productividad laboral--- y un 
+conjunto de posibles variables explicativas relacionadas con las características 
+del teletrabajo, del puesto y del trabajador. Esto permite aplicar procedimientos 
+descriptivos e inferenciales dirigidos a estimar asociaciones, comparar grupos 
+e identificar los factores que explican en mayor medida las diferencias de 
+productividad.
+
+Desde el punto de vista **práctico**, los resultados pueden aportar información 
+para orientar decisiones relacionadas con la implementación de esquemas 
+presenciales, híbridos o remotos, así como para identificar las condiciones 
+bajo las cuales el teletrabajo puede estar asociado con mejores resultados 
+laborales.
+
+La investigación también puede contribuir a distinguir el efecto aparente del 
+teletrabajo de la influencia de otras características de los trabajadores y 
+de sus condiciones laborales. Esta distinción es importante para evitar 
+conclusiones basadas únicamente en comparaciones simples entre trabajadores 
+presenciales y remotos.
+
+Finalmente, el estudio es pertinente para la formación estadística porque 
+requiere traducir un problema sustantivo en variables medibles, formular 
+hipótesis contrastables y seleccionar procedimientos estadísticos coherentes 
+con la naturaleza de los datos y con los alcances del diseño de investigación.
+
+<!-- En el anteproyecto, explicite además la relevancia científica, social o
+institucional, los posibles beneficiarios y la viabilidad del estudio. -->
+
+# Objetivos
+
+## Objetivo general
+
+**Evaluar si la modalidad e intensidad del teletrabajo están asociadas con la 
+productividad laboral de los empleados de empresas de diseño gráfico de Bogotá 
+durante el año 2025, considerando características laborales y sociodemográficas 
+que también puedan estar asociadas con dicha productividad.**
+
+## Objetivos específicos
+
+1. **Caracterizar** a los empleados según sus características sociodemográficas 
+   y laborales, la modalidad e intensidad del teletrabajo y sus indicadores de 
+   productividad laboral.
+
+2. **Describir y comparar** los niveles de productividad laboral entre empleados 
+   con diferentes modalidades e intensidades de teletrabajo.
+
+3. **Identificar** las características laborales y sociodemográficas asociadas 
+   con la productividad laboral.
+
+4. **Evaluar** la asociación entre la modalidad e intensidad del teletrabajo y 
+   la productividad laboral, ajustando estadísticamente por características 
+   laborales y sociodemográficas relevantes.
+
+5. **Evaluar**, cuando la información disponible lo permita, si la asociación 
+   entre la modalidad e intensidad del teletrabajo y la productividad laboral 
+   varía según características laborales o sociodemográficas de los empleados.
+   
+<!-- Revise los objetivos a la luz de la factibilidad metodológica. Cada objetivo
+específico debe corresponder posteriormente con uno o más procedimientos de análisis. -->
+
+# Antecedentes
+
+<!--
+Presente una síntesis crítica de investigaciones previas directamente relacionadas
+con el problema. No construya una lista de resúmenes aislados: compare objetivos,
+poblaciones, datos, métodos y hallazgos, e identifique el vacío que justifica su
+investigación. Utilice referencias bibliográficas pertinentes y actuales.
+-->
+
+[Desarrolle aquí los antecedentes de la investigación.]
+
+Paa el caso del teletrabajo la idea sería mencionar los resutados de investigaciones internacionales 
+al respecto como las de @criscuolo2021role de la OCDE y de @golden2019unpacking
+
+Para estudios latinoamericanos al respecto consultar por ejemplo @santiago2023teletrabajo, 
+@oviedo2023teleworking y @delbono2025teletrabajo
+
+EN colombia se pueden consultar trabajos como el de MinTic @mintic2022estudio, camara de comercio 
+@ccb2021caracterizacion y @ramirez2023teletrabajo
+
+# Marco conceptual
+
+<!--
+Defina y articule los conceptos esenciales para comprender el problema y las
+variables del estudio. Cuando corresponda, incluya teorías, modelos o relaciones
+conceptuales que orienten la formulación de hipótesis y el análisis estadístico.
+-->
+
+[Desarrolle aquí el marco conceptual.]
+
+# Metodología
+
+## Enfoque y diseño de investigación
+
+<!--
+Indique el enfoque (cuantitativo, cualitativo o mixto, según corresponda), el tipo
+y diseño del estudio y justifique su elección en función de la pregunta y los
+objetivos. Para estudios cuantitativos, precise si el diseño es experimental o no
+experimental y, cuando sea pertinente, si es transversal, longitudinal, etc.
+-->
+
+[Describa aquí el enfoque y el diseño de investigación.]
+
+## Población, unidad de análisis y muestra
+
+<!--
+Defina la población objetivo, la unidad de análisis, el marco o fuente de acceso a
+la población y los criterios de inclusión/exclusión. Si se trabajará con una
+muestra, describa el diseño muestral y, cuando sea posible, el procedimiento para
+determinar su tamaño. Si se utilizará un censo o una base de datos existente,
+indíquelo explícitamente.
+-->
+
+[Describa aquí la población, la unidad de análisis y la muestra.]
+
+## Variables e indicadores
+
+<!--
+Identifique la variable de respuesta y las variables explicativas principales,
+así como posibles variables de control. Para cada variable indique su definición
+operacional, tipo o escala de medición, codificación y fuente.
+Puede incluir una tabla de operacionalización.
+-->
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Definición y caracterización de las variables del estudio}
+\label{tab:variables}
+
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{3pt}
+
+\begin{tabular}{
+|>{\raggedright\arraybackslash}p{0.14\textwidth}
+|>{\raggedright\arraybackslash}p{0.24\textwidth}
+|>{\raggedright\arraybackslash}p{0.25\textwidth}
+|>{\raggedright\arraybackslash}p{0.16\textwidth}
+|>{\raggedright\arraybackslash}p{0.11\textwidth}|
+}
+\hline
+
+\textbf{Variable} &
+\textbf{Papel en el estudio} &
+\textbf{Definición operacional} &
+\textbf{Tipo/escala} &
+\textbf{Fuente} \\
+\hline
+
+[Variable 1] &
+[Respuesta / explicativa / control] &
+[Definición] &
+[Tipo] &
+[Fuente] \\
+\hline
+
+[Variable 2] &
+[Respuesta / explicativa / control] &
+[Definición] &
+[Tipo] &
+[Fuente] \\
+\hline
+
+\end{tabular}
+\end{table}
+
+## Fuentes de información e instrumentos
+
+<!--
+Describa el origen de los datos. Si realizará recolección primaria, especifique el
+instrumento, procedimiento de aplicación y controles de calidad. Si utilizará
+datos secundarios, identifique la base de datos, institución responsable,
+período, cobertura y variables relevantes.
+-->
+
+[Describa aquí las fuentes de información y los instrumentos.]
+
+## Procedimiento
+
+<!--
+Explique secuencialmente cómo se obtendrán, depurarán, organizarán y prepararán
+los datos para el análisis. Incluya, cuando corresponda, tratamiento de valores
+faltantes, valores atípicos, consistencia y construcción de variables derivadas.
+-->
+
+[Describa aquí el procedimiento.]
+
+## Plan preliminar de análisis estadístico
+
+<!--
+Relacione explícitamente cada objetivo específico con los procedimientos
+estadísticos que se utilizarán. Evite enumerar técnicas sin justificar su
+pertinencia. Incluya análisis descriptivo, métodos inferenciales y modelos según
+corresponda, así como los principales supuestos que deberán verificarse.
+-->
+
+| Objetivo específico | Variables involucradas | Procedimiento estadístico propuesto |
+|:--------------------|:------------------------|:------------------------------------|
+| 1 | [Variables] | [Procedimiento] |
+| 2 | [Variables] | [Procedimiento] |
+| 3 | [Variables] | [Procedimiento] |
+| 4 | [Variables] | [Procedimiento] |
+| 5 | [Variables] | [Procedimiento] |
+
+## Consideraciones éticas y manejo de la información
+
+<!--
+Indique los aspectos éticos relevantes para el estudio: consentimiento, privacidad,
+confidencialidad, anonimización y manejo seguro de la información, según aplique.
+-->
+
+[Describa aquí las consideraciones éticas y de manejo de la información.]
+
+# Cronograma
+
+<!-- Ajuste las actividades y períodos a las fechas reales del seminario. -->
+
+| Actividad | Período 1 | Período 2 | Período 3 | Período 4 |
+|:----------|:---------:|:---------:|:---------:|:---------:|
+| Revisión bibliográfica | X | X |  |  |
+| Obtención y preparación de datos |  | X | X |  |
+| Análisis estadístico |  |  | X | X |
+| Elaboración del informe final |  |  |  | X |
+
+# Anexos
+
+Incluya, cuando corresponda:
+
+- Tablas o gráficas adicionales.  
+- Archivos de código R utilizados.  
+- Encuestas, modelos o instrumentos.  
+- Diccionario de variables o ficha técnica de la base de datos.  
+- Discusiones teóricas sobre modelos o metodologías.
+
+# Referencias
+
+::: {#refs}
+:::
