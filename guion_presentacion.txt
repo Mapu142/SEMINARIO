@@ -1,194 +1,282 @@
 GUION DE PRESENTACION — Cafeina y enfermedad cardiovascular (NHANES 2017-2018)
 ================================================================================
-12 diapositivas. Cada una trae (1) un boceto de que poner en la diapositiva
-y (2) el texto exacto de lo que se dice en voz alta. Lo que se dice NUNCA
-repite lo que ya esta escrito en la diapositiva — la amplia o la explica.
+13 diapositivas, hasta el objetivo 1 (caracterizacion ponderada) completo.
+Cada diapositiva trae: (1) el texto en viñetas secuenciales que va en pantalla
+(recordatorio si se te olvida algo), y (2) el texto exacto de lo que se dice
+en voz alta, que amplia las viñetas sin leerlas literal.
 
 --------------------------------------------------------------------------------
 DIAPOSITIVA 1 — Portada
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Titulo: Consumo de cafeina y enfermedad cardiovascular en adultos de
-  Estados Unidos: un analisis de la encuesta NHANES 2017-2018
-- Nombres, curso, universidad, fecha
+TEXTO DE LA DIAPOSITIVA:
+- Consumo de cafeína y enfermedad cardiovascular en adultos de Estados
+  Unidos: un análisis de la encuesta NHANES 2017-2018
+- Karen Barrantes — María Paula Camargo
+- Seminario de Estadística, Universidad Nacional de Colombia
 
-QUE DECIR:
-"Buenos dias/tardes. Vamos a presentar el avance de nuestro anteproyecto
-sobre el consumo de cafeina y la enfermedad cardiovascular, usando datos
-de la encuesta NHANES de Estados Unidos."
-
---------------------------------------------------------------------------------
-DIAPOSITIVA 2 — El problema y la pregunta de investigacion
---------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Frase corta: "la cafeina sube la presion arterial momentaneamente... pero
-  los estudios de seguimiento no encuentran mayor riesgo"
-- Pregunta de investigacion (cita textual, en negrita)
-
-QUE DECIR:
-"Durante mucho tiempo se penso que la cafeina era un factor de riesgo
-cardiovascular, porque sube momentaneamente la presion arterial y el ritmo
-cardiaco. Pero cuando se sigue a las personas durante años, ese riesgo no
-aparece. Nuestra pregunta es si eso tambien se observa con una fuente de
-datos distinta: una encuesta transversal y representativa de Estados
-Unidos, y si la relacion se mantiene o se explica por la edad y el sexo de
-quienes consumen mas cafeina."
+QUÉ DECIR:
+"Buenos días/tardes. Vamos a presentar el avance de nuestro anteproyecto
+sobre el consumo de cafeína y la enfermedad cardiovascular, usando
+datos de la encuesta NHANES de Estados Unidos. Ya tenemos el primer
+objetivo completo con resultados reales, que es lo que vamos a mostrar
+hoy."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 3 — Que dice la literatura, y que le falta
+DIAPOSITIVA 2 — Índice
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- 3 estudios en una linea de tiempo o tabla corta:
-  Ding et al. 2014 (36 cohortes, 1.2 millones) | Poole et al. 2017 (200+
-  metaanalisis) | Stevens et al. 2021 (Framingham, ARIC, CHS)
-- Una frase de cierre: "Ninguno es transversal ni discute edad/sexo como
-  posibles factores de confusion"
+TEXTO DE LA DIAPOSITIVA:
+1. Problema y pregunta de investigación
+2. Antecedentes
+3. Objetivos
+4. Los datos y el diseño muestral de NHANES
+5. Cómo se construyó la muestra analítica
+6. Primer vistazo a los datos (sin ponderar)
+7. Objetivo 1: caracterización ponderada — resultado clave
+8. Qué sigue (objetivos 2-6 y cronograma)
 
-QUE DECIR:
-"Estos tres trabajos coinciden en algo importante: el consumo habitual de
-cafeina no se asocia con mayor riesgo cardiovascular. Pero los tres son
-estudios de cohorte, siguen personas en el tiempo, usan poblaciones
-particulares, y ninguno discute si la edad o el sexo podrian estar
-explicando esa relacion. Ese es el vacio que queremos llenar: mirar la
-misma pregunta con una encuesta transversal y poner la confusion por edad
-y sexo en el centro del analisis, no como una nota al margen."
-
---------------------------------------------------------------------------------
-DIAPOSITIVA 4 — Por que vale la pena este proyecto
---------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Tres palabras clave: Salud publica / Practica estadistica / Viabilidad
-
-QUE DECIR:
-"Nos parece relevante por tres razones. En salud publica, porque la
-cafeina la consume casi toda la poblacion adulta y es facil de modificar
-en la dieta diaria. En lo estadistico, porque nos permite practicar
-descripcion, comparacion de grupos y, sobre todo, distinguir una
-asociacion real de una que en realidad se explica por otra variable. Y es
-viable porque los datos son publicos y ya tenemos la base lista para
-trabajar."
+QUÉ DECIR:
+"Así va a estar organizada la presentación. Vamos a empezar por el
+problema y la literatura que ya existe, pasamos por los objetivos y la
+metodología, y cerramos con los resultados — esa última parte es la
+que no estaba en la entrega anterior."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 5 — Objetivos
+DIAPOSITIVA 3 — El problema y la pregunta de investigación
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Objetivo general (una linea)
-- Los 6 especificos agrupados visualmente en 3 bloques:
-  Describir (1-2) | Explorar confusion (3) | Ajustar y confirmar (4-6)
+TEXTO DE LA DIAPOSITIVA:
+- La cafeína puede subir momentáneamente la presión arterial y el ritmo
+  cardíaco → por años se vio como posible factor de riesgo.
+- Pero los estudios que siguen personas en el tiempo (cohortes) no
+  encuentran mayor riesgo cardiovascular con el consumo habitual.
+- Esos estudios son longitudinales; nosotras usamos una fuente distinta:
+  una encuesta transversal y representativa de EE. UU. (NHANES).
+- Pregunta: ¿existe asociación entre cafeína y ECV autorreportada, una
+  vez se controla por edad, sexo y otras características
+  sociodemográficas?
 
-QUE DECIR:
-"El objetivo general es evaluar esa asociacion controlando por edad, sexo
-y otras caracteristicas sociodemograficas. Para llegar ahi no vamos
-directo al modelo final: primero caracterizamos y comparamos de forma
-descriptiva, despues exploramos si edad y sexo cambian el patron que
-vemos, y solo con esa evidencia decidimos que entra al modelo ajustado.
-Los dos ultimos objetivos son extensiones: ver si la relacion es
-realmente lineal, y revisar si los resultados son estables segun el tipo
-de evento cardiovascular."
-
---------------------------------------------------------------------------------
-DIAPOSITIVA 6 — Los datos: NHANES y su diseño muestral
---------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- NHANES 2017-2018: encuesta publica, representativa de EE. UU.
-- Diagrama simple: muestreo por etapas (condados -> segmentos -> viviendas
-  -> personas) + "peso muestral + estrato + conglomerado"
-
-QUE DECIR:
-"NHANES no elige a sus participantes al azar simple, sino con un diseño
-en varias etapas que sobre-representa ciertos grupos a proposito. Por
-eso, analizar esta base sin usar los pesos y el diseño muestral daria
-resultados que no representan a la poblacion real, y errores estandar
-subestimados que hacen parecer todo mas significativo de lo que es.
-Vamos a declarar ese diseño directamente en R antes de estimar cualquier
-modelo."
+QUÉ DECIR:
+"Este es el punto de partida del proyecto. La idea de la cafeína como
+factor de riesgo viene de un efecto fisiológico inmediato, pero como
+van a ver en la siguiente diapositiva, la evidencia de más largo plazo
+cuenta otra historia. Nuestro aporte no es repetir esos estudios, sino
+mirar la misma pregunta con una lupa distinta — y por eso la pregunta
+de investigación no busca probar que la cafeína es segura o riesgosa,
+sino ver si la asociación se sostiene una vez se tienen en cuenta otras
+características de las personas."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 7 — De 8.366 a 4.180: como llegamos a la muestra analitica
+DIAPOSITIVA 4 — Qué dice la literatura, y qué le falta
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Flujo simple: 8.366 (3 bases integradas) -> 5.265 (edad >= 20) -> 4.180
-  (casos completos)
-- Una linea: "20,5% de la poblacion elegible tenia algun dato faltante"
+TEXTO DE LA DIAPOSITIVA:
+- Ding et al. (2014): metaanálisis, 36 cohortes, 1,2 millones de
+  personas → menor riesgo entre 3 y 5 tazas/día, sin aumento en
+  consumos altos.
+- Poole et al. (2017): revisión de más de 200 metaanálisis → el
+  consumo habitual se asocia más con beneficios que con daños.
+- Stevens et al. (2021): cohortes Framingham, ARIC y CHS → más café,
+  menor riesgo de falla cardíaca.
+- Lo que les falta: son longitudinales, con poblaciones particulares, y
+  ninguno discute edad/sexo como posibles factores de confusión.
+- Ese es el vacío que llenamos: una fuente transversal, nacional, que sí
+  pone la confusión por edad/sexo en el centro del análisis.
 
-QUE DECIR:
-"Integramos demografia, dieta y condiciones medicas de NHANES por el
-identificador de cada persona. Filtramos a mayores de 20 años porque las
-preguntas sobre enfermedad cardiovascular solo se le hacen a ese grupo.
-Despues revisamos los datos faltantes en cafeina, energia y el indice de
-ingreso: cerca de una quinta parte de los elegibles tenia algun faltante.
-Con los casos completos quedamos en 4.180 participantes, que es nuestra
-muestra analitica."
-
---------------------------------------------------------------------------------
-DIAPOSITIVA 8 — Avance: lo que ya vemos en los datos
---------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- La figura de barras (prevalencia de ECV por categoria de cafeina y por
-  grupo de edad)
-- Una nota chica: "sin ponderar, solo exploratorio"
-
-QUE DECIR:
-"Esto es un primer vistazo, todavia sin los pesos del diseño muestral.
-La prevalencia de enfermedad cardiovascular sube de 9,3% en quienes no
-consumen cafeina a 16,1% en quienes consumen mas de 400 miligramos al
-dia. A primera vista parece preocupante."
+QUÉ DECIR:
+"Estos tres trabajos coinciden en algo importante: el consumo habitual
+de cafeína no se asocia con mayor riesgo cardiovascular. Pero los tres
+son estudios de cohorte, siguen personas en el tiempo, usan poblaciones
+particulares, y ninguno discute si la edad o el sexo podrían estar
+explicando esa relación. Ese es el vacío que queremos llenar: mirar la
+misma pregunta con una encuesta transversal y poner la confusión por
+edad y sexo en el centro del análisis, no como una nota al margen."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 9 — Pero hay que tener cuidado: el mismo patron con la edad
+DIAPOSITIVA 5 — Por qué vale la pena este proyecto
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Comparacion lado a lado: edad media por categoria de cafeina (46,7 a
-  53,9 años) vs. prevalencia por grupo de edad (1,2% a 21,1%)
-- Frase en grande: "Esto NO es evidencia de que la cafeina cause ECV"
+TEXTO DE LA DIAPOSITIVA:
+- Salud pública: la cafeína la consume casi toda la población adulta y
+  es fácil de modificar en la dieta.
+- Estadística: permite practicar descripción, comparación de grupos, y
+  sobre todo distinguir una asociación real de una explicada por otra
+  variable (confusión).
+- Viabilidad: datos públicos, ya con el objetivo 1 corriendo con
+  resultados reales (no solo un plan en papel).
 
-QUE DECIR:
-"Si miramos la edad, encontramos que quienes consumen mas cafeina
-tambien son, en promedio, un poco mayores. Y la prevalencia de
-enfermedad cardiovascular varia mucho mas fuerte con la edad que con la
-cafeina: de 1,2% en los mas jovenes a 21,1% en los mayores de 60. Esto
-es justo el patron de confusion que anticipamos desde el planteamiento
-del problema: lo que parece un efecto de la cafeina podria ser, en
-realidad, un efecto de la edad. Por eso el siguiente paso es ajustar por
-esa variable antes de sacar cualquier conclusion."
-
---------------------------------------------------------------------------------
-DIAPOSITIVA 10 — Como lo vamos a confirmar: plan de analisis
---------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Tabla resumida de 3 filas (no las 6 completas): Estratificar ->
-  Regresion logistica ajustada (ponderada) -> Sensibilidad por evento
-
-QUE DECIR:
-"El paso que sigue es repetir esta comparacion dentro de cada grupo de
-edad y por sexo, para decidir que entra al modelo. Despues ajustamos una
-regresion logistica con el diseño muestral completo, que nos da la
-asociacion ya controlada por edad, sexo y las demas caracteristicas.
-Y para que los resultados no dependan de una sola forma de medir el
-desenlace, los vamos a repetir por separado para enfermedad coronaria,
-infarto y accidente cerebrovascular."
+QUÉ DECIR:
+"Estas tres razones fueron las que nos motivaron a elegir este tema
+desde la propuesta original, y siguen siendo válidas ahora que ya
+estamos corriendo análisis reales sobre los datos."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 11 — Cronograma y proximos pasos
+DIAPOSITIVA 6 — Objetivos
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- Linea de tiempo de 4 periodos (bibliografia / datos / analisis / informe)
-- Lista corta "siguiente paso inmediato": declarar el diseño muestral en R
-  y correr los modelos ponderados
+TEXTO DE LA DIAPOSITIVA:
+General: Evaluar la asociación entre cafeína y ECV, controlando por
+edad, sexo y otras características sociodemográficas.
 
-QUE DECIR:
-"Ya estamos en la etapa de analisis: los datos estan listos, el plan esta
-definido, y lo que sigue es correr los modelos con el diseño muestral
-completo para tener resultados ponderados y ajustados, no solo la
-exploracion cruda que mostramos hoy."
+Específicos:
+1. Caracterizar la muestra (sociodemografía, cafeína, ECV). [HECHO]
+2. Describir y comparar prevalencia de ECV por categoría de cafeína.
+3. Explorar descriptivamente si edad/sexo cambian ese patrón.
+4. Estimar la asociación ajustando por confusión (modelo principal).
+5. Ver si la relación es lineal o tiene curvatura.
+6. Revisar si los resultados son estables por tipo de evento.
+
+QUÉ DECIR:
+"El objetivo general es evaluar esa asociación controlando por edad,
+sexo y otras características sociodemográficas. No vamos directo al
+modelo final: primero caracterizamos y comparamos de forma descriptiva,
+después exploramos si edad y sexo cambian el patrón que vemos, y solo
+con esa evidencia decidimos qué entra al modelo ajustado. Los dos
+últimos objetivos son extensiones: ver si la relación es realmente
+lineal, y revisar si los resultados son estables según el tipo de
+evento cardiovascular. Como ven, el objetivo 1 ya está marcado como
+hecho — es justo lo que les vamos a mostrar hoy."
 
 --------------------------------------------------------------------------------
-DIAPOSITIVA 12 — Cierre
+DIAPOSITIVA 7 — Los datos: NHANES y su diseño muestral
 --------------------------------------------------------------------------------
-QUE VA EN LA DIAPOSITIVA:
-- "Gracias" + contacto
-- Opcional: una linea resumen del mensaje central
+TEXTO DE LA DIAPOSITIVA:
+- NHANES 2017-2018: encuesta pública del NCHS/CDC, representativa de
+  Estados Unidos.
+- No es muestreo aleatorio simple: es un diseño en varias etapas
+  (condados → segmentos → viviendas → personas), con sobremuestreo de
+  ciertos grupos.
+- Por eso el análisis necesita: peso muestral + estrato + conglomerado
+  (SDMVSTRA, SDMVPSU, peso del recordatorio dietético).
+- Ignorar esto da resultados que no representan a la población real —
+  lo vamos a mostrar con números concretos más adelante.
 
-QUE DECIR:
-"Gracias. Con gusto recibimos preguntas o sugerencias sobre el enfoque
-antes de pasar a correr los modelos finales."
+QUÉ DECIR:
+"Esto suena técnico, pero tiene una consecuencia muy concreta: dos
+personas con las mismas características pueden representar cantidades
+muy distintas de población real, según el estrato y el conglomerado en
+que cayeron. Si uno trata la base como si fuera una muestra aleatoria
+simple, el resultado se ve bien, pero está sesgado sin que se note a
+simple vista — esa es la trampa que queríamos evitar desde el diseño
+metodológico."
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 8 — De 8.366 a 4.180: construcción de la muestra
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Se integraron 3 archivos de NHANES (demografía, dieta, condiciones
+  médicas) por el identificador de cada persona → 8.366 registros.
+- Se filtró a personas de 20 años o más (las preguntas de ECV solo
+  aplican a ese grupo) → 5.265 registros.
+- Se revisaron los datos faltantes en cafeína, energía y razón
+  ingreso/pobreza: 20,5 % de los elegibles tenía algún faltante.
+- Muestra analítica final (casos completos): 4.180 participantes.
+
+QUÉ DECIR:
+"Ninguno de estos pasos es un filtro arbitrario. Integrar por el
+identificador asegura que estemos hablando de las mismas personas en
+las tres fuentes; el filtro de edad es porque la pregunta de
+enfermedad cardiovascular simplemente no se le hace a los menores de
+20; y la revisión de faltantes nos permitió comparar a los casos
+completos contra los incompletos y documentar que no había diferencias
+grandes entre ellos, antes de decidir trabajar solo con los completos.
+Esta es la base sobre la que corrimos todo lo que viene."
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 9 — Primer vistazo a los datos (sin ponderar)
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Exploración inicial, SIN aplicar todavía el diseño muestral completo.
+- Prevalencia de ECV por categoría de cafeína: sube de 9,3 % (0 mg) a
+  16,1 % (>400 mg/día).
+- Pero la edad media también sube en el mismo sentido: de 46,7 a 53,9
+  años entre categorías.
+- Y la prevalencia de ECV varía mucho más con la edad (1,2 % en 20-39
+  años → 21,1 % en 60+) que con la cafeína.
+- Alerta: esto podría ser confusión por edad, no un efecto real de la
+  cafeína.
+
+QUÉ DECIR:
+"Mostramos esto antes de los resultados ponderados a propósito:
+queríamos que vieran el mismo tipo de conclusión apresurada en la que
+uno podría caer si no tuviera cuidado con el diseño muestral y con la
+confusión. Esta diapositiva es, literalmente, la pregunta sin resolver
+que motivó el resto del análisis — y la respuesta viene en dos
+diapositivas más."
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 10 — Objetivo 1 completo: caracterización ponderada
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Ya con el diseño muestral completo declarado (peso + estrato +
+  conglomerado) en R (paquete survey).
+- Sexo: 51,7 % mujeres, 48,3 % hombres.
+- Raza: 63,5 % blanco no hispano, 10,9 % negro no hispano, 8,7 %
+  mexicano-americano.
+- Educación: 30 % con estudios universitarios o más.
+- Edad mediana: 48 años. Cafeína mediana: 131 mg/día.
+- La composición sociodemográfica no cambia mucho frente al vistazo
+  inicial sin ponderar.
+
+QUÉ DECIR:
+"Lo que ven aquí ya no es una exploración preliminar, es el resultado
+real del objetivo 1, corrido con el diseño muestral completo. La buena
+noticia es que la composición demográfica resultó bastante estable
+frente a lo que habíamos visto sin ponderar — eso da cierta tranquilidad
+de que no hay ahí un sesgo enorme. Pero guarden esa tranquilidad con
+cautela, porque no toda variable se comporta igual, como van a ver en
+la siguiente diapositiva."
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 11 — El resultado clave: ponderada vs. sin ponderar
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Prevalencia de ECV SIN ponderar: 10,4 %.
+- Prevalencia de ECV PONDERADA (diseño NHANES): 7,9 % (IC 95 %:
+  6,2 % - 9,9 %).
+- Diferencia de más de 2 puntos porcentuales, solo por aplicar
+  correctamente el diseño muestral.
+- Confirma, con datos reales, por qué insistimos tanto en los pesos y
+  el diseño complejo de NHANES desde la metodología.
+
+QUÉ DECIR:
+"Esta es la comparación más importante que tenemos hasta ahora. La
+prevalencia sin ponderar, que fue la que vimos al principio, era de
+10,4%. Pero la prevalencia correctamente ponderada por el diseño
+muestral de NHANES es de 7,9%. Más de dos puntos porcentuales de
+diferencia, solo por aplicar bien el diseño de la encuesta. Esto
+confirma con datos reales algo que anticipamos desde el planteamiento
+del problema: ignorar los pesos de NHANES lleva a conclusiones que no
+representan a la población de Estados Unidos." [Tómate tu tiempo aquí,
+es la diapositiva más importante — no la apures.]
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 12 — Qué sigue: objetivos 2-6 y cronograma
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Objetivo 2: prevalencia de ECV por categoría de cafeína, ya ponderada
+  y con prueba de Rao-Scott.
+- Objetivo 3: estratificar por edad y sexo, para decidir qué entra al
+  modelo ajustado.
+- Objetivo 4: regresión logística ajustada (modelo principal).
+- Objetivos 5-6: término cuadrático (curvatura) y sensibilidad por tipo
+  de evento.
+- Cronograma: ya en la etapa de análisis estadístico, según lo
+  planeado.
+
+QUÉ DECIR:
+"El resto de los objetivos sigue el mismo principio que venimos
+aplicando: no saltar directo a conclusiones, sino construir la
+evidencia paso a paso, siempre con el diseño muestral completo. El
+punto de llegada es el modelo ajustado del objetivo 4 — todo lo demás
+existe para justificar qué entra ahí y por qué. Seguimos el cronograma
+tal como lo habíamos planteado."
+
+--------------------------------------------------------------------------------
+DIAPOSITIVA 13 — Cierre
+--------------------------------------------------------------------------------
+TEXTO DE LA DIAPOSITIVA:
+- Gracias
+- Karen Barrantes · kbarrantes@unal.edu.co
+- María Paula Camargo · mcamargo@unal.edu.co
+- Mensaje para llevar: el diseño muestral sí cambia la conclusión —
+  10,4 % vs. 7,9 %.
+
+QUÉ DECIR:
+"Gracias. Con gusto recibimos preguntas o sugerencias antes de seguir
+con los objetivos que faltan."
