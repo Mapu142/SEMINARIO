@@ -24,7 +24,7 @@ abstract: |
   vista se sostiene o si en realidad se explica por esos factores.
 
 output:
-  pdf_document:
+  bookdown::pdf_document2:
     keep_tex: true
     toc: true
     toc_depth: 3
@@ -319,6 +319,10 @@ inclusión y cuenten con la información necesaria.
 
 ## Variables e indicadores
 
+El Cuadro \@ref(tab:variables) resume la variable de respuesta, la explicativa principal y
+las variables de control consideradas en el estudio, con su definición
+operacional, tipo de escala y fuente de origen en NHANES.
+
 \begin{table}[H]
 \centering
 \small
@@ -517,7 +521,7 @@ características de los participantes; se conservan también las
 versiones continuas de estas variables para los análisis que las usen
 como tales.
 
-## Avance: análisis descriptivo preliminar
+## Análisis descriptivo preliminar
 
 Como avance del proyecto, presentamos una caracterización descriptiva
 preliminar de la muestra de casos completos (n = 4.180), siguiendo el
@@ -558,9 +562,10 @@ kable(tabla_sociodem,
   caption = "Distribución sociodemográfica y de consumo de cafeína (n = 4.180, sin ponderar)")
 ```
 
-La muestra tiene una edad media de 51,2 años (rango 20-80), 51,4 % de
-mujeres y una prevalencia cruda de ECV de 10,4 %. Por categoría de
-cafeína:
+Según el Cuadro \@ref(tab:avance-tabla1), la muestra tiene una edad
+media de 51,2 años (rango 20-80), 51,4 % de mujeres y una prevalencia
+cruda de ECV de 10,4 %. Por categoría de cafeína
+(Cuadro \@ref(tab:avance-tabla2)):
 
 ```{r avance-tabla2, echo=FALSE}
 prevalencia_cafeina <- round(tapply(df$ecv, df$cat_cafeina, mean, na.rm = TRUE) * 100, 1)
@@ -591,7 +596,8 @@ La prevalencia cruda de ECV sube de forma aproximadamente monótona con
 la categoría de cafeína (9,3 % en "0 mg" a 16,1 % en ">400 mg"), pero
 la edad media también sube en el mismo sentido (de 46,7 a 53,9 años), y
 la prevalencia varía mucho más con la edad (1,2 % en 20-39 años frente
-a 21,1 % en 60 años o más, ver Figura 1) que con la cafeína. Este es
+a 21,1 % en 60 años o más, ver Figura \@ref(fig:avance-figura)) que con
+la cafeína. Este es
 justo el patrón de confusión anticipado en el planteamiento del
 problema y en el marco conceptual: quienes consumen más cafeína tienden
 a ser, en promedio, un poco mayores, y la edad está fuertemente
@@ -632,6 +638,115 @@ secundario de datos públicos desidentificados, no se prevé contacto con
 participantes ni recolección de información identificable; los
 requisitos institucionales de revisión ética aplicables deberán
 verificarse según las normas de la universidad.
+
+# Resultados preliminares
+
+En el análisis ponderado según el diseño muestral de NHANES se
+identificó una muestra sociodemográficamente equilibrada entre sexos,
+con predominio de participantes blancos no hispanos y un nivel
+educativo relativamente alto, además de un consumo de cafeína
+extendido en casi toda la población adulta. A continuación se presentan
+los resultados esenciales de esta caracterización; 
+
+```{r resultados-setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(survey)
+
+df$sexo      <- factor(df$sexo)
+df$raza      <- factor(df$raza)
+df$educacion <- factor(df$educacion,
+  levels = c("Menos de 9no grado", "9-11 grado (sin terminar)",
+             "Bachiller / GED", "Universidad incompleta / tecnico",
+             "Universitario o mas"))
+
+diseno <- svydesign(ids = ~psu, strata = ~estrato, weights = ~peso_dieta,
+                     nest = TRUE, data = df)
+```
+
+```{r resultados-tabla1, echo=FALSE}
+tabla_categorica <- function(var, design) {
+  f   <- as.formula(paste0("~", var))
+  est <- svymean(f, design, na.rm = TRUE)
+  data.frame(
+    Variable = var,
+    `Categoría` = sub(var, "", names(coef(est))),
+    `Porcentaje (%)` = round(100 * coef(est), 1),
+    check.names = FALSE, row.names = NULL
+  )
+}
+
+categoricas <- do.call(rbind, lapply(
+  c("sexo", "raza", "educacion", "cat_cafeina"),
+  tabla_categorica, design = diseno
+))
+
+kable(categoricas, row.names = FALSE,
+  caption = "Características sociodemográficas y consumo de cafeína (ponderado, n = 4.180)")
+```
+
+Como se evidencia en el Cuadro \@ref(tab:resultados-tabla1), la muestra
+queda prácticamente
+dividida en partes iguales entre mujeres (51,7 %) y hombres (48,3 %);
+el 63,5 % se identifica como blanco no hispano, seguido de negro no
+hispano (10,9 %) y mexicano-americano (8,7 %); y en cuanto a cafeína,
+solo el 11,9 % reporta no consumir nada, mientras que el consumo
+moderado de 1 a 100 mg/día es la categoría más frecuente (29,2 %).
+
+```{r resultados-tabla2, echo=FALSE}
+tabla_cuantitativa <- function(var, design) {
+  f  <- as.formula(paste0("~", var))
+  m  <- svymean(f, design, na.rm = TRUE)
+  q  <- svyquantile(f, design, quantiles = c(0.25, 0.5, 0.75), na.rm = TRUE)
+  qm <- unname(q[[1]][, "quantile"])
+  data.frame(
+    Variable = var,
+    Media = unname(round(coef(m), 1)),
+    Mediana = round(qm[2], 1),
+    `RIC (p25-p75)` = paste0(round(qm[1], 1), " - ", round(qm[3], 1)),
+    check.names = FALSE, stringsAsFactors = FALSE
+  )
+}
+
+cuant <- do.call(rbind, lapply(c("edad", "pir", "kcal", "cafeina_mg"),
+                                tabla_cuantitativa, design = diseno))
+
+kable(cuant, row.names = FALSE,
+  caption = "Variables cuantitativas (ponderadas, n = 4.180)")
+```
+
+En las variables cuantitativas (Cuadro \@ref(tab:resultados-tabla2)) se
+identificó una edad
+mediana de 48 años (la mitad de los adultos tiene entre 33 y 62 años),
+un ingreso familiar relativo a la línea de pobreza (PIR) mediano de
+3,1, y un consumo mediano de cafeína de 131 mg/día, con bastante
+dispersión entre personas (RIC de 33 a 247 mg).
+
+```{r resultados-prevalencia, echo=FALSE, fig.width=5, fig.height=3.5, fig.cap="Prevalencia de ECV autorreportada: estimación ponderada (diseño muestral de NHANES) frente a la estimación sin ponderar."}
+ecv_prop <- svyciprop(~I(ecv == 1), diseno, method = "logit", na.rm = TRUE)
+prevalencias <- c(
+  "Sin ponderar" = 100 * mean(df$ecv),
+  "Ponderada"    = unname(100 * coef(ecv_prop))
+)
+bp <- barplot(prevalencias, col = c("#C44E52", "#4C72B0"), width = 0.5,
+              ylab = "Prevalencia de ECV (%)", ylim = c(0, 12))
+text(bp, prevalencias, labels = paste0(round(prevalencias, 1), "%"),
+     pos = 3, font = 2)
+```
+
+El hallazgo más relevante de este primer corte se identificó al
+comparar la prevalencia de ECV ponderada con la estimación cruda; como
+se evidencia en la Figura \@ref(fig:resultados-prevalencia), la
+prevalencia sin ponderar
+(10,4 %) sobreestima la prevalencia ponderada (7,9 %; IC 95 %:
+6,2-9,9 %) en más de dos puntos porcentuales. Esto confirma que ignorar
+los pesos y el diseño muestral de NHANES lleva a una prevalencia que no
+representa bien a la población de Estados Unidos. Las demás
+características (sexo, raza, educación, PIR, consumo de cafeína) no
+cambiaron tanto entre la versión ponderada y la exploración sin
+ponderar del avance, lo cual tiene sentido porque la ECV está
+concentrada en los grupos de mayor edad, que es justo donde más pesa el
+sobremuestreo de NHANES.
+
+
 
 # Cronograma
 

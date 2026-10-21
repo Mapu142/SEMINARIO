@@ -25,14 +25,20 @@ retroalimentación de la primera entrega.
 - `df.xlsx` ya incluye las variables de diseño muestral complejo
   (`peso_dieta`, `estrato`, `psu`), necesarias para declarar el
   `svydesign` en R.
-- Anteproyecto redactado completo (16 páginas): problema, justificación,
-  objetivos, antecedentes, marco conceptual, metodología, un primer
-  avance descriptivo con datos reales, plan de análisis, cronograma y
-  anexos. Compila a PDF sin errores.
-- **Pendiente:** correr los modelos del plan de análisis (descriptivos
-  ponderados, regresión logística ajustada, término cuadrático,
-  modelos por tipo de evento). Todavía no hay resultados "finales",
-  solo el avance exploratorio sin ponderar.
+- **Objetivo 1 completo**: caracterización ponderada (sociodemográfica,
+  cafeína y prevalencia de ECV) ya corrida con el diseño muestral real
+  (`analisis_objetivo1.R`) e incorporada al documento en la sección
+  "Resultados preliminares". Hallazgo clave: la prevalencia de ECV
+  ponderada (7,9 %) es menor que la sin ponderar (10,4 %).
+- Anteproyecto redactado completo (19 páginas): problema, justificación,
+  objetivos, antecedentes, marco conceptual, metodología, avance
+  descriptivo exploratorio, resultados preliminares (objetivo 1), plan
+  de análisis, cronograma y anexos. Compila a PDF sin errores. Las
+  tablas y figuras se referencian en el texto con numeración automática
+  (`bookdown`), no a mano.
+- **Pendiente:** objetivos 2 a 6 (comparación de prevalencia por
+  categoría de cafeína, estratificación, modelo logístico ajustado,
+  término cuadrático, análisis por tipo de evento).
 
 ## 3. Archivos del repositorio
 
@@ -42,6 +48,8 @@ retroalimentación de la primera entrega.
 | `Propuesta_de_investigacion_cafeina_ECV.pdf` | El PDF ya compilado, listo para entregar/leer. |
 | `bibliografia_seminario.bib` | Las referencias citadas en el `.Rmd` (10 en total, todas citadas en el texto — nada de relleno). |
 | `df.xlsx` | **La base de datos lista para análisis** (4.180 filas, 17 columnas). Es el insumo directo para correr los modelos. |
+| `analisis_objetivo1.R` | Script de R que declara el diseño muestral (`survey::svydesign`) y corre la caracterización ponderada del objetivo 1 (tablas + gráficas). Es la base para replicar el mismo patrón en los objetivos 2-6. |
+| `figuras_objetivo1/` | Gráficas generadas por ese script (distribución por categoría, histogramas, prevalencia ponderada vs. sin ponderar). Solo un resumen de estas quedó incrustado en el PDF; el resto queda aquí para consulta. |
 | `base_real_cafeina.ipynb` | Notebook (Python) que descarga los `.xpt` de NHANES, los integra, limpia los faltantes, construye las variables derivadas y genera `df.xlsx`. **Este es el notebook actualizado** (incluye `estrato`/`psu`). |
 | `base_datos_cafeina_ecv.ipynb` | Otro notebook con un proceso parecido, pero es una versión **anterior** (no tiene las variables de diseño muestral). Conviene no seguir editando este en paralelo — ver nota abajo. |
 | `base_cafeina_ecv.csv` / `datos/base_cafeina_ecv.csv` | Mismo contenido que `df.xlsx`, en CSV. Se genera en el mismo notebook. |
@@ -133,6 +141,14 @@ complejo (pesos, estratos, conglomerados).
   consentimiento nuevo necesario; la conclusión siempre se interpretará
   como asociación, no como causalidad.
 
+### Resultados preliminares
+El objetivo 1 ya corrido de verdad, con el diseño muestral completo
+(no sin ponderar como el avance). Trae dos tablas (sociodemografía y
+cafeína; edad/PIR/energía/cafeína) y una gráfica con el hallazgo
+central: la prevalencia ponderada de ECV (7,9 %, IC 95 % 6,2-9,9 %) es
+más de dos puntos menor que la cruda sin ponderar (10,4 %) — confirma
+con datos reales por qué insistimos tanto en el diseño muestral.
+
 ### Cronograma
 Cuatro períodos: revisión bibliográfica, preparación de datos, análisis
 estadístico, informe final. Ajustar fechas según el calendario real del
@@ -145,32 +161,44 @@ alguien no recuerda qué es `pir` o de dónde salió `cat_cafeina`.
 
 ## 5. Cómo compilar el documento (knit)
 
-Se necesita R + RStudio instalados (o al menos R con los paquetes
-`rmarkdown`, `knitr`, `readxl`, `tinytex`). Si se knitea desde RStudio,
-"Knit" normal funciona. Si se hace desde la terminal sin abrir RStudio,
-primero hay que apuntar a su pandoc empaquetado:
+Se necesita R + RStudio instalados, con los paquetes `rmarkdown`,
+`knitr`, `readxl`, `tinytex`, `survey` y **`bookdown`** (el documento
+usa `bookdown::pdf_document2` para que las referencias a "Cuadro N" /
+"Figura N" en el texto se numeren solas — si falta, instalarlo con
+`install.packages(c("bookdown", "survey"))`). Si se knitea desde
+RStudio, "Knit" normal funciona. Si se hace desde la terminal sin abrir
+RStudio, primero hay que apuntar a su pandoc empaquetado:
 
 ```powershell
 $env:RSTUDIO_PANDOC = "C:\Program Files\RStudio\resources\app\bin\quarto\bin\tools"
 Rscript -e "rmarkdown::render('Propuesta_de_investigacion_cafeina_ECV.Rmd')"
 ```
 
-El `.Rmd` lee `df.xlsx` directamente (en la sección de avance), así que
-ese archivo debe estar en la misma carpeta al momento de compilar.
+El `.Rmd` lee `df.xlsx` directamente (secciones de avance y resultados),
+así que ese archivo debe estar en la misma carpeta al momento de
+compilar.
+
+Nota: si el knit falla con un error de `xfun`/`bookdown` (versión muy
+vieja), es porque algún proceso (RStudio, la extensión de R de VS Code)
+tiene el paquete cargado y bloquea la actualización. Cerrar esas
+sesiones y volver a instalar suele resolverlo.
 
 ## 6. Próximos pasos (lo que falta)
 
 En el orden del plan de análisis:
 
-1. Declarar el diseño muestral en R (`survey::svydesign` con
-   `weights = peso_dieta`, `strata = estrato`, `ids = psu`).
-2. Objetivo 1-2: descriptivos y prevalencias **ponderadas** (lo que hay
-   ahora en "Avance" es sin ponderar, a propósito, solo para explorar).
-3. Objetivo 3: estratificar por edad/sexo para decidir ajuste e
+1. ~~Declarar el diseño muestral en R~~ — hecho en `analisis_objetivo1.R`
+   (`svydesign` con `weights = peso_dieta`, `strata = estrato`,
+   `ids = psu`).
+2. ~~Objetivo 1: caracterización ponderada~~ — hecho, ver "Resultados
+   preliminares" en el documento.
+3. Objetivo 2: prevalencia de ECV por categoría de cafeína, ponderada,
+   con prueba de Rao-Scott.
+4. Objetivo 3: estratificar por edad/sexo para decidir ajuste e
    interacciones.
-4. Objetivo 4: `svyglm()` logístico ajustado — el modelo principal.
-5. Objetivo 5: agregar el término cuadrático y probarlo con Wald.
-6. Objetivo 6: repetir el modelo por tipo de evento (coronaria, infarto,
+5. Objetivo 4: `svyglm()` logístico ajustado — el modelo principal.
+6. Objetivo 5: agregar el término cuadrático y probarlo con Wald.
+7. Objetivo 6: repetir el modelo por tipo de evento (coronaria, infarto,
    ACV).
-7. Si da el tiempo: sensibilidad con imputación múltiple vs. casos
+8. Si da el tiempo: sensibilidad con imputación múltiple vs. casos
    completos (mencionado como complementario en Procedimiento).
